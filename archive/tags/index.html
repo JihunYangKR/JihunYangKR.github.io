@@ -104,6 +104,22 @@ layout: null
                         #{{ tag }}
                     </h3>
 
+                    {% assign tag_count = 0 %}
+
+                    {% for post in site.posts %}
+
+                        {% if post.tags contains tag %}
+
+                            {% assign tag_count = tag_count | plus: 1 %}
+
+                        {% endif %}
+
+                    {% endfor %}
+
+                    <p>
+                        {{ tag_count }} posts
+                    </p>
+
                 </div>
 
                 <span>
