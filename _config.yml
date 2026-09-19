@@ -1,0 +1,7 @@
+title: "Jihun Yang"
+description: "Personal Portfolio & Knowledge Archive"
+
+markdown: kramdown
+theme: null
+
+permalink: /notes/:title/
