@@ -2,6 +2,7 @@
 <html lang="ko">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -15,6 +16,7 @@
         rel="stylesheet"
         href="../../css/style.css"
     >
+
 </head>
 
 <body>
@@ -57,77 +59,84 @@
 
 <main>
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="container">
+    <div class="container">
 
-            <p class="eyebrow">
-                ARCHIVE / NOTES
-            </p>
+        <p class="eyebrow">
+            ARCHIVE / NOTES
+        </p>
 
-            <h1>
-                Notes
-            </h1>
+        <h1>
+            Notes
+        </h1>
 
-            <p class="hero-description">
-                Personal notes, study materials,
-                ideas, and things worth remembering.
-            </p>
+        <p class="hero-description">
+            Personal notes, study materials,
+            ideas, and things worth remembering.
+        </p>
 
-        </div>
+    </div>
 
-    </section>
-
-
-    <section>
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <p class="eyebrow">
-                    ALL NOTES
-                </p>
-
-                <h2>
-                    Notes
-                </h2>
-
-            </div>
+</section>
 
 
-            <div class="archive-list">
+<section>
 
-                <a href="#">
+<div class="container">
 
-                    <div>
+    <div class="section-header">
 
-                        <span class="archive-date">
-                            2026
-                        </span>
+        <p class="eyebrow">
+            ALL NOTES
+        </p>
 
-                        <h3>
-                            Example Note
-                        </h3>
+        <h2>
+            Notes
+        </h2>
 
-                        <p>
-                            This is a placeholder for
-                            future Markdown notes.
-                        </p>
+    </div>
 
-                    </div>
 
-                    <span>
-                        →
+    <div class="archive-list">
+
+        {% for post in site.posts %}
+
+            {% if post.categories contains "notes" %}
+
+            <a href="{{ post.url }}">
+
+                <div>
+
+                    <span class="archive-date">
+                        {{ post.date | date: "%Y-%m-%d" }}
                     </span>
 
-                </a>
+                    <h3>
+                        {{ post.title }}
+                    </h3>
 
-            </div>
+                    <p>
+                        {{ post.excerpt | strip_html | truncate: 120 }}
+                    </p>
 
-        </div>
+                </div>
 
-    </section>
+                <span>
+                    →
+                </span>
+
+            </a>
+
+            {% endif %}
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</section>
 
 </main>
 
@@ -150,4 +159,5 @@
 <script src="../../js/main.js"></script>
 
 </body>
+
 </html>
