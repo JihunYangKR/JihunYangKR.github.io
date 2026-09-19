@@ -1,24 +1,50 @@
+---
+layout: null
+---
+
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Papers — Jihun Yang</title>
-    <link rel="stylesheet" href="../../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="../../css/style.css"
+    >
+
 </head>
 
 <body>
 
 <header class="navbar">
+
     <div class="nav-container">
 
-        <a href="../../index.html" class="logo">
+        <a
+            href="../../index.html"
+            class="logo"
+        >
             Jihun Yang
         </a>
 
         <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../index.html">Archive</a>
+
+            <a href="../../index.html">
+                Home
+            </a>
+
+            <a href="../index.html">
+                Archive
+            </a>
 
             <button
                 id="theme-button"
@@ -27,29 +53,35 @@
             >
                 🌙
             </button>
+
         </nav>
 
     </div>
+
 </header>
 
 
 <main>
 
 <section class="hero">
+
     <div class="container">
 
         <p class="eyebrow">
             ARCHIVE / PAPERS
         </p>
 
-        <h1>Papers</h1>
+        <h1>
+            Papers
+        </h1>
 
         <p class="hero-description">
-            Papers, research materials,
-            and academic references.
+            Paper notes, literature reviews,
+            research ideas, and references.
         </p>
 
     </div>
+
 </section>
 
 
@@ -58,30 +90,51 @@
 <div class="container">
 
     <div class="section-header">
-        <p class="eyebrow">ALL PAPERS</p>
-        <h2>Papers</h2>
+
+        <p class="eyebrow">
+            ALL PAPERS
+        </p>
+
+        <h2>
+            Papers
+        </h2>
+
     </div>
+
 
     <div class="archive-list">
 
-        <a href="#">
-            <div>
-                <span class="archive-date">
-                    2026
+        {% for post in site.posts %}
+
+            {% if post.categories contains "papers" %}
+
+            <a href="{{ post.url }}">
+
+                <div>
+
+                    <span class="archive-date">
+                        {{ post.date | date: "%Y-%m-%d" }}
+                    </span>
+
+                    <h3>
+                        {{ post.title }}
+                    </h3>
+
+                    <p>
+                        {{ post.excerpt | strip_html | truncate: 120 }}
+                    </p>
+
+                </div>
+
+                <span>
+                    →
                 </span>
 
-                <h3>
-                    Example Paper
-                </h3>
+            </a>
 
-                <p>
-                    A placeholder for future research
-                    materials and papers.
-                </p>
-            </div>
+            {% endif %}
 
-            <span>→</span>
-        </a>
+        {% endfor %}
 
     </div>
 
@@ -99,9 +152,11 @@
     </div>
 
     <div>
+
         <a href="../index.html">
             Back to Archive ↑
         </a>
+
     </div>
 
 </footer>
@@ -110,4 +165,5 @@
 <script src="../../js/main.js"></script>
 
 </body>
+
 </html>
