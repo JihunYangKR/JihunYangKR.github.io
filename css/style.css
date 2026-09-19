@@ -967,5 +967,16 @@ footer {
 .search-count {
     margin-bottom: 20px;
     opacity: 0.65;
-    font-size: 0.9rem;
+}
+
+.search-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 10px 0 12px;
+}
+
+.search-meta .tag {
+    font-size: 0.78rem;
+    padding: 4px 8px;
 }
