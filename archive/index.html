@@ -418,20 +418,11 @@ layout: null
 
         {
             title: {{ post.title | jsonify }},
-
             url: {{ post.url | jsonify }},
-
             date: {{ post.date | date: "%Y-%m-%d" | jsonify }},
-
-            excerpt:
-                {{ post.excerpt | strip_html | jsonify }},
-
-            categories:
-                {{ post.categories | jsonify }},
-
-            tags:
-                {{ post.tags | jsonify }}
-
+            excerpt: {{ post.excerpt | strip_html | jsonify }},
+            categories: {{ post.categories | jsonify }},
+            tags: {{ post.tags | jsonify }}
         },
 
         {% endfor %}
@@ -493,56 +484,59 @@ layout: null
             });
 
 
+        let html =
+            `<p class="search-count">
+                ${results.length} posts found
+            </p>`;
+
+
         if (results.length === 0) {
 
-            searchResults.innerHTML =
-                "<p>No posts found.</p>";
-
-            return;
+            html += `
+                <p>
+                    No posts found.
+                </p>
+            `;
 
         }
 
-        
-        searchResults.innerHTML =
-            `<p class="search-count">
-                ${results.length} posts found
-            </p>` +
-            results.map(function(post) {
-        
-        searchResults.innerHTML =
-            results.map(function(post) {
 
-                return `
+        results.forEach(function(post) {
 
-                    <a
-                        href="${post.url}"
-                        class="archive-item"
-                    >
+            html += `
 
-                        <div>
+                <a
+                    href="${post.url}"
+                    class="archive-item"
+                >
 
-                            <span class="archive-date">
-                                ${post.date}
-                            </span>
+                    <div>
 
-                            <h3>
-                                ${post.title}
-                            </h3>
+                        <span class="archive-date">
+                            ${post.date}
+                        </span>
 
-                            <div class="search-meta">
+                        <h3>
+                            ${post.title}
+                        </h3>
 
-                                ${(post.categories || []).map(function(category) {
+                        <div class="search-meta">
+
+                            ${(post.categories || []).map(
+                                function(category) {
 
                                     return `
                                         <span class="tag">
-                                        ${category}
+                                            ${category}
                                         </span>
                                     `;
 
-                                }).join("")}
+                                }
+                            ).join("")}
 
 
-                                ${(post.tags || []).map(function(tag) {
+                            ${(post.tags || []).map(
+                                function(tag) {
 
                                     return `
                                         <span class="tag">
@@ -550,25 +544,29 @@ layout: null
                                         </span>
                                     `;
 
-                                }).join("")}
-
-                            </div>
-
-                            <p>
-                                ${post.excerpt}
-                            </p>
+                                }
+                            ).join("")}
 
                         </div>
 
-                        <span>
-                            →
-                        </span>
+                        <p>
+                            ${post.excerpt}
+                        </p>
 
-                    </a>
+                    </div>
 
-                `;
+                    <span>
+                        →
+                    </span>
 
-            }).join("");
+                </a>
+
+            `;
+
+        });
+
+
+        searchResults.innerHTML = html;
 
     }
 
