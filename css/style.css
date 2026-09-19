@@ -943,3 +943,19 @@ footer {
 .post-content code {
     font-family: Consolas, Monaco, "Courier New", monospace;
 }
+
+/* =========================
+   Search Result Meta
+   ========================= */
+
+.search-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 10px 0 12px;
+}
+
+.search-meta .tag {
+    font-size: 0.78rem;
+    padding: 4px 8px;
+}
