@@ -265,7 +265,52 @@ layout: null
 
 </section>
 
+    
+<section>
 
+<div class="container">
+
+    <div class="section-header">
+
+        <p class="eyebrow">
+            SEARCH
+        </p>
+
+        <h2>
+            Search Archive
+        </h2>
+
+    </div>
+
+    <input
+        type="search"
+        id="archive-search"
+        placeholder="Search notes, papers, projects..."
+        style="
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--card-background);
+            color: var(--text-color);
+            font-size: 16px;
+            box-sizing: border-box;
+        "
+    >
+
+    <div
+        id="search-results"
+        class="archive-list"
+    >
+
+    </div>
+
+</div>
+
+</section>
+
+    
 <section>
 
 <div class="container">
@@ -341,6 +386,114 @@ layout: null
 
 <script src="../js/main.js"></script>
 
+<script>
+
+const posts = [
+    {% for post in site.posts %}
+    {
+        title: {{ post.title | jsonify }},
+        url: {{ post.url | relative_url | jsonify }},
+        date: {{ post.date | date: "%Y-%m-%d" | jsonify }},
+        excerpt: {{ post.excerpt | strip_html | truncate: 150 | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+];
+
+const searchInput =
+    document.getElementById("archive-search");
+
+const searchResults =
+    document.getElementById("search-results");
+
+
+function renderResults(results) {
+
+    searchResults.innerHTML = "";
+
+    if (results.length === 0) {
+
+        searchResults.innerHTML =
+            "<p>검색 결과가 없습니다.</p>";
+
+        return;
+    }
+
+
+    results.forEach(function(post) {
+
+        const link =
+            document.createElement("a");
+
+        link.href = post.url;
+
+        link.innerHTML = `
+            <div>
+                <span class="archive-date">
+                    ${post.date}
+                </span>
+
+                <h3>
+                    ${post.title}
+                </h3>
+
+                <p>
+                    ${post.excerpt}
+                </p>
+            </div>
+
+            <span>→</span>
+        `;
+
+        searchResults.appendChild(link);
+
+    });
+
+}
+
+
+searchInput.addEventListener(
+    "input",
+    function() {
+
+        const query =
+            searchInput.value
+                .toLowerCase()
+                .trim();
+
+
+        if (!query) {
+
+            searchResults.innerHTML = "";
+
+            return;
+        }
+
+
+        const results =
+            posts.filter(function(post) {
+
+                return (
+                    post.title
+                        .toLowerCase()
+                        .includes(query)
+
+                    ||
+
+                    post.excerpt
+                        .toLowerCase()
+                        .includes(query)
+                );
+
+            });
+
+
+        renderResults(results);
+
+    }
+);
+
+</script>
+    
 </body>
 
 </html>
