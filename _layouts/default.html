@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="{{ site.lang | default: 'ko' }}">
 
 <head>
 
@@ -11,12 +11,57 @@
     >
 
     <title>
-        {{ page.title }} — Jihun Yang
+        {% if page.title %}
+            {{ page.title }} — {{ site.title }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
     </title>
+
+
+    <meta
+        name="description"
+        content="{{ page.description | default: site.description | escape }}"
+    >
+
+    <meta
+        name="author"
+        content="{{ site.author.name | escape }}"
+    >
+
+
+    <link
+        rel="canonical"
+        href="{{ page.url | absolute_url }}"
+    >
+
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}"
+    >
+
+    <meta
+        property="og:description"
+        content="{{ page.description | default: site.description | escape }}"
+    >
+
+    <meta
+        property="og:type"
+        content="{% if page.date %}article{% else %}website{% endif %}"
+    >
+
+    <meta
+        property="og:url"
+        content="{{ page.url | absolute_url }}"
+    >
+
 
     <link
         rel="stylesheet"
-        href="/css/style.css"
+        href="{{ '/css/style.css' | relative_url }}"
     >
 
 </head>
@@ -28,7 +73,7 @@
     <div class="nav-container">
 
         <a
-            href="/"
+            href="{{ '/' | relative_url }}"
             class="logo"
         >
             Jihun Yang
@@ -36,19 +81,19 @@
 
         <nav>
 
-            <a href="/">
+            <a href="{{ '/' | relative_url }}">
                 Home
             </a>
 
-            <a href="/#about">
+            <a href="{{ '/#about' | relative_url }}">
                 About
             </a>
 
-            <a href="/#projects">
+            <a href="{{ '/#projects' | relative_url }}">
                 Projects
             </a>
 
-            <a href="/archive/">
+            <a href="{{ '/archive/' | relative_url }}">
                 Archive
             </a>
 
@@ -81,15 +126,17 @@
     </div>
 
     <div>
-        <a href="/archive/">
+
+        <a href="{{ '/archive/' | relative_url }}">
             Back to Archive ↑
         </a>
+
     </div>
 
 </footer>
 
 
-<script src="/js/main.js"></script>
+<script src="{{ '/js/main.js' | relative_url }}"></script>
 
 </body>
 
