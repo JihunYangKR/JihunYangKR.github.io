@@ -1,0 +1,131 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Page Not Found — Jihun Yang
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ '/css/style.css' | relative_url }}"
+    >
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a
+            href="{{ '/' | relative_url }}"
+            class="logo"
+        >
+            Jihun Yang
+        </a>
+
+        <nav>
+
+            <a href="{{ '/' | relative_url }}">
+                Home
+            </a>
+
+            <a href="{{ '/archive/' | relative_url }}">
+                Archive
+            </a>
+
+            <button
+                id="theme-button"
+                class="icon-button"
+                onclick="toggleTheme()"
+            >
+                🌙
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="container">
+
+        <p class="eyebrow">
+            404
+        </p>
+
+        <h1>
+            Page Not Found
+        </h1>
+
+        <p class="hero-description">
+            The page you're looking for
+            doesn't exist or may have moved.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="{{ '/' | relative_url }}"
+                class="button primary"
+            >
+                Back to Home
+            </a>
+
+            <a
+                href="{{ '/archive/' | relative_url }}"
+                class="button secondary"
+            >
+                Browse Archive
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        © 2026 Jihun Yang
+    </div>
+
+    <div>
+
+        <a href="{{ '/' | relative_url }}">
+            ← Home
+        </a>
+
+    </div>
+
+</footer>
+
+
+<script src="{{ '/js/main.js' | relative_url }}"></script>
+
+</body>
+
+</html>
