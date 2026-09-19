@@ -1,0 +1,222 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Tags — Jihun Yang</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/style.css"
+    >
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a
+            href="../../index.html"
+            class="logo"
+        >
+            Jihun Yang
+        </a>
+
+        <nav>
+
+            <a href="../../index.html">
+                Home
+            </a>
+
+            <a href="../index.html">
+                Archive
+            </a>
+
+            <button
+                id="theme-button"
+                class="icon-button"
+                onclick="toggleTheme()"
+            >
+                🌙
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="container">
+
+        <p class="eyebrow">
+            ARCHIVE
+        </p>
+
+        <h1>
+            Tags
+        </h1>
+
+        <p class="hero-description">
+            Browse the archive by topic.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+    <div class="archive-list">
+
+        {% assign all_tags = site.posts | map: "tags" | join: "," | split: "," | uniq | sort %}
+
+        {% for tag in all_tags %}
+
+            {% if tag != "" %}
+
+            <a href="#{{ tag | slugify }}">
+
+                <div>
+
+                    <h3>
+                        #{{ tag }}
+                    </h3>
+
+                </div>
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+            {% endif %}
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+    {% for tag in all_tags %}
+
+        {% if tag != "" %}
+
+        <div
+            id="{{ tag | slugify }}"
+            style="margin-bottom: 50px;"
+        >
+
+            <div class="section-header">
+
+                <p class="eyebrow">
+                    TAG
+                </p>
+
+                <h2>
+                    #{{ tag }}
+                </h2>
+
+            </div>
+
+
+            <div class="archive-list">
+
+                {% for post in site.posts %}
+
+                    {% if post.tags contains tag %}
+
+                    <a href="{{ post.url }}">
+
+                        <div>
+
+                            <span class="archive-date">
+                                {{ post.date | date: "%Y-%m-%d" }}
+                            </span>
+
+                            <h3>
+                                {{ post.title }}
+                            </h3>
+
+                            <p>
+                                {{ post.excerpt | strip_html | truncate: 120 }}
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+                    {% endif %}
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+    {% endfor %}
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        © 2026 Jihun Yang
+    </div>
+
+    <div>
+
+        <a href="../index.html">
+            ← Back to Archive
+        </a>
+
+    </div>
+
+</footer>
+
+
+<script src="../../js/main.js"></script>
+
+</body>
+
+</html>
