@@ -244,49 +244,28 @@
 
             <div class="archive-list">
 
-                <article class="archive-item">
+                {% for post in site.posts limit:5 %}
 
-                    <span>2026.09</span>
+                <a
+                    href="{{ post.url }}"
+                    class="archive-item"
+                >
 
-                    <h3
-                        data-ko="개인 포트폴리오 사이트 구축"
-                        data-en="Building My Personal Portfolio">
-                        개인 포트폴리오 사이트 구축
+                    <span>
+                        {{ post.date | date: "%Y.%m" }}
+                    </span>
+
+                    <h3>
+                        {{ post.title }}
                     </h3>
 
-                    <span>→</span>
+                    <span>
+                        →
+                    </span>
 
-                </article>
+                </a>
 
-
-                <article class="archive-item">
-
-                    <span>2026</span>
-
-                    <h3
-                        data-ko="공부 기록"
-                        data-en="Study Notes">
-                        공부 기록
-                    </h3>
-
-                    <span>→</span>
-
-                </article>
-
-
-                <article class="archive-item">
-
-                    <span>2026</span>
-
-                    <h3
-                        data-ko="개인 기록"
-                        data-en="Personal Notes">
-                        개인 기록
-                    </h3>
-
-                    <span>→</span>
-
-                </article>
+                {% endfor %}
 
             </div>
 
