@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jihun Yang</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.7;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 50px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .language-button {
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background: white;
+            padding: 6px 10px;
+            border-radius: 5px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <strong>Jihun Yang</strong>
+
+        <nav>
+            <a href="#about" data-ko="소개" data-en="About">소개</a>
+            <a href="#projects" data-ko="프로젝트" data-en="Projects">프로젝트</a>
+            <a href="#archive" data-ko="아카이브" data-en="Archive">아카이브</a>
+
+            <button
+                class="language-button"
+                onclick="toggleLanguage()">
+                English
+            </button>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Hero -->
+
+        <section>
+
+            <h1
+                data-ko="안녕하세요, 양지훈입니다."
+                data-en="Hello, I'm Jihun Yang.">
+                안녕하세요, 양지훈입니다.
+            </h1>
+
+            <p
+                data-ko="개인 프로젝트와 공부 기록을 정리하는 개인 포트폴리오입니다."
+                data-en="This is my personal portfolio for projects, learning, and notes.">
+                개인 프로젝트와 공부 기록을 정리하는 개인 포트폴리오입니다.
+            </p>
+
+        </section>
+
+
+        <!-- About -->
+
+        <section id="about">
+
+            <h2
+                data-ko="소개"
+                data-en="About">
+                소개
+            </h2>
+
+            <p
+                data-ko="여기에 자기소개를 작성합니다."
+                data-en="This section contains information about me.">
+                여기에 자기소개를 작성합니다.
+            </p>
+
+        </section>
+
+
+        <!-- Projects -->
+
+        <section id="projects">
+
+            <h2
+                data-ko="프로젝트"
+                data-en="Projects">
+                프로젝트
+            </h2>
+
+            <p
+                data-ko="참여 프로젝트를 이곳에 정리합니다."
+                data-en="My projects are listed here.">
+                참여 프로젝트를 이곳에 정리합니다.
+            </p>
+
+        </section>
+
+
+        <!-- Archive -->
+
+        <section id="archive">
+
+            <h2
+                data-ko="아카이브"
+                data-en="Archive">
+                아카이브
+            </h2>
+
+            <p
+                data-ko="공부 기록과 개인 자료를 이곳에 정리합니다."
+                data-en="My study notes and personal archive are collected here.">
+                공부 기록과 개인 자료를 이곳에 정리합니다.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 Jihun Yang</p>
+
+    </footer>
+
+
+    <script>
+
+        let currentLanguage = "ko";
+
+
+        function toggleLanguage() {
+
+            currentLanguage =
+                currentLanguage === "ko" ? "en" : "ko";
+
+
+            document.documentElement.lang =
+                currentLanguage;
+
+
+            const elements =
+                document.querySelectorAll("[data-ko]");
+
+
+            elements.forEach(function(element) {
+
+                element.textContent =
+                    element.getAttribute(
+                        "data-" + currentLanguage
+                    );
+
+            });
+
+
+            const button =
+                document.querySelector(".language-button");
+
+
+            button.textContent =
+                currentLanguage === "ko"
+                    ? "English"
+                    : "한국어";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
