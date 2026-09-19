@@ -10,9 +10,3 @@ tags:
   - archive
 permalink: /notes/second-note/
 ---
-
-# My Second Archive Note
-
-This is my second archive note.
-
-이것은 두 번째 아카이브 테스트 글입니다.
