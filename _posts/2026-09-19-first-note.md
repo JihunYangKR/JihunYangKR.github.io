@@ -4,6 +4,7 @@ title: "My First Archive Note"
 date: 2026-09-19
 categories:
   - notes
+permalink: /notes/first-note/
 ---
 
 # My First Archive Note
