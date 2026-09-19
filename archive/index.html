@@ -412,72 +412,41 @@ layout: null
 
 <script>
 
-const posts = [
-    {% for post in site.posts %}
-    {
-        title: {{ post.title | jsonify }},
-        url: {{ post.url | relative_url | jsonify }},
-        date: {{ post.date | date: "%Y-%m-%d" | jsonify }},
-        excerpt: {{ post.excerpt | strip_html | truncate: 150 | jsonify }}
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-];
+    const posts = [
 
-const searchInput =
-    document.getElementById("archive-search");
+        {% for post in site.posts %}
 
-const searchResults =
-    document.getElementById("search-results");
+        {
+            title: {{ post.title | jsonify }},
 
+            url: {{ post.url | jsonify }},
 
-function renderResults(results) {
+            date: {{ post.date | date: "%Y-%m-%d" | jsonify }},
 
-    searchResults.innerHTML = "";
+            excerpt:
+                {{ post.excerpt | strip_html | jsonify }},
 
-    if (results.length === 0) {
+            categories:
+                {{ post.categories | jsonify }},
 
-        searchResults.innerHTML =
-            "<p>검색 결과가 없습니다.</p>";
+            tags:
+                {{ post.tags | jsonify }}
 
-        return;
-    }
+        },
+
+        {% endfor %}
+
+    ];
 
 
-    results.forEach(function(post) {
+    const searchInput =
+        document.getElementById("archive-search");
 
-        const link =
-            document.createElement("a");
-
-        link.href = post.url;
-
-        link.innerHTML = `
-            <div>
-                <span class="archive-date">
-                    ${post.date}
-                </span>
-
-                <h3>
-                    ${post.title}
-                </h3>
-
-                <p>
-                    ${post.excerpt}
-                </p>
-            </div>
-
-            <span>→</span>
-        `;
-
-        searchResults.appendChild(link);
-
-    });
-
-}
+    const searchResults =
+        document.getElementById("search-results");
 
 
-searchInput.addEventListener(
-    "input",
-    function() {
+    function searchPosts() {
 
         const query =
             searchInput.value
@@ -490,31 +459,93 @@ searchInput.addEventListener(
             searchResults.innerHTML = "";
 
             return;
+
         }
 
 
         const results =
             posts.filter(function(post) {
 
+                const title =
+                    post.title.toLowerCase();
+
+                const excerpt =
+                    post.excerpt.toLowerCase();
+
+                const categories =
+                    (post.categories || [])
+                        .join(" ")
+                        .toLowerCase();
+
+                const tags =
+                    (post.tags || [])
+                        .join(" ")
+                        .toLowerCase();
+
+
                 return (
-                    post.title
-                        .toLowerCase()
-                        .includes(query)
-
-                    ||
-
-                    post.excerpt
-                        .toLowerCase()
-                        .includes(query)
+                    title.includes(query) ||
+                    excerpt.includes(query) ||
+                    categories.includes(query) ||
+                    tags.includes(query)
                 );
 
             });
 
 
-        renderResults(results);
+        if (results.length === 0) {
+
+            searchResults.innerHTML =
+                "<p>No posts found.</p>";
+
+            return;
+
+        }
+
+
+        searchResults.innerHTML =
+            results.map(function(post) {
+
+                return `
+
+                    <a
+                        href="${post.url}"
+                        class="archive-item"
+                    >
+
+                        <div>
+
+                            <span class="archive-date">
+                                ${post.date}
+                            </span>
+
+                            <h3>
+                                ${post.title}
+                            </h3>
+
+                            <p>
+                                ${post.excerpt}
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+                `;
+
+            }).join("");
 
     }
-);
+
+
+    searchInput.addEventListener(
+        "input",
+        searchPosts
+    );
 
 </script>
     
