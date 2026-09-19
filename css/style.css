@@ -959,3 +959,13 @@ footer {
     font-size: 0.78rem;
     padding: 4px 8px;
 }
+
+/* =========================
+   Search Count
+   ========================= */
+
+.search-count {
+    margin-bottom: 20px;
+    opacity: 0.65;
+    font-size: 0.9rem;
+}
