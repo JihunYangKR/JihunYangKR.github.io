@@ -523,6 +523,31 @@ layout: null
                                 ${post.title}
                             </h3>
 
+                            <div class="search-meta">
+
+                                ${(post.categories || []).map(function(category) {
+
+                                    return `
+                                        <span class="tag">
+                                        ${category}
+                                        </span>
+                                    `;
+
+                                }).join("")}
+
+
+                                ${(post.tags || []).map(function(tag) {
+
+                                    return `
+                                        <span class="tag">
+                                            #${tag}
+                                        </span>
+                                    `;
+
+                                }).join("")}
+
+                            </div>
+
                             <p>
                                 ${post.excerpt}
                             </p>
