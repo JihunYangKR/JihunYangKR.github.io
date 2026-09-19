@@ -1,6 +1,14 @@
 title: "Jihun Yang"
 description: "Personal Portfolio & Knowledge Archive"
 
+url: "https://jihunyangkr.github.io"
+baseurl: ""
+
+author:
+  name: "Jihun Yang"
+
+lang: "ko"
+
 markdown: kramdown
 theme: null
 
