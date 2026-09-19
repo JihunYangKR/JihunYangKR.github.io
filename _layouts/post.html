@@ -111,6 +111,64 @@
 
 </div>
 
+{% if page.previous or page.next %}
+
+<div
+    style="
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid var(--border-color);
+    "
+>
+
+    <div>
+
+        {% if page.previous %}
+
+        <a href="{{ page.previous.url }}">
+
+            ← Previous
+
+            <br>
+
+            <strong>
+                {{ page.previous.title }}
+            </strong>
+
+        </a>
+
+        {% endif %}
+
+    </div>
+
+
+    <div style="text-align: right;">
+
+        {% if page.next %}
+
+        <a href="{{ page.next.url }}">
+
+            Next →
+
+            <br>
+
+            <strong>
+                {{ page.next.title }}
+            </strong>
+
+        </a>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endif %}
+    
 </section>
 
 </main>
