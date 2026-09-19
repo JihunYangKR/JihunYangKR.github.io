@@ -7,75 +7,41 @@
 
     <title>Jihun Yang</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            line-height: 1.7;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
-            margin-bottom: 50px;
-        }
-
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #333;
-        }
-
-        .language-button {
-            cursor: pointer;
-            border: 1px solid #ccc;
-            background: white;
-            padding: 6px 10px;
-            border-radius: 5px;
-        }
-
-        section {
-            margin-bottom: 50px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-        }
-
-        h2 {
-            margin-bottom: 10px;
-        }
-
-        footer {
-            border-top: 1px solid #ddd;
-            padding-top: 20px;
-            color: #777;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
+    <!-- Navigation -->
+    <header class="navbar">
 
-        <strong>Jihun Yang</strong>
+        <a href="#" class="logo">
+            JIHUN YANG
+        </a>
 
-        <nav>
+        <nav class="nav-links">
             <a href="#about" data-ko="소개" data-en="About">소개</a>
             <a href="#projects" data-ko="프로젝트" data-en="Projects">프로젝트</a>
             <a href="#archive" data-ko="아카이브" data-en="Archive">아카이브</a>
+        </nav>
+
+        <div class="nav-buttons">
 
             <button
-                class="language-button"
+                id="language-button"
+                class="icon-button"
                 onclick="toggleLanguage()">
-                English
+                EN
             </button>
-        </nav>
+
+            <button
+                id="theme-button"
+                class="icon-button"
+                onclick="toggleTheme()">
+                🌙
+            </button>
+
+        </div>
 
     </header>
 
@@ -83,104 +49,278 @@
     <main>
 
         <!-- Hero -->
+        <section class="hero">
 
-        <section>
+            <p class="eyebrow"
+               data-ko="PERSONAL PORTFOLIO & ARCHIVE"
+               data-en="PERSONAL PORTFOLIO & ARCHIVE">
+                PERSONAL PORTFOLIO & ARCHIVE
+            </p>
 
             <h1
-                data-ko="안녕하세요, 양지훈입니다."
-                data-en="Hello, I'm Jihun Yang.">
-                안녕하세요, 양지훈입니다.
+                data-ko="안녕하세요,<br>Jihun입니다."
+                data-en="Hello,<br>I'm Jihun.">
+                안녕하세요,<br>Jihun입니다.
             </h1>
 
-            <p
-                data-ko="개인 프로젝트와 공부 기록을 정리하는 개인 포트폴리오입니다."
-                data-en="This is my personal portfolio for projects, learning, and notes.">
-                개인 프로젝트와 공부 기록을 정리하는 개인 포트폴리오입니다.
+            <p class="hero-description"
+               data-ko="프로젝트, 공부 기록과 개인적인 작업을 정리하는 공간입니다."
+               data-en="A personal space for my projects, learning, and work.">
+                프로젝트, 공부 기록과 개인적인 작업을 정리하는 공간입니다.
             </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="button primary"
+                   data-ko="프로젝트 보기"
+                   data-en="View Projects">
+                    프로젝트 보기
+                </a>
+
+                <a href="https://github.com/JihunYangKR"
+                   class="button secondary"
+                   target="_blank">
+                    GitHub ↗
+                </a>
+
+            </div>
 
         </section>
 
 
         <!-- About -->
+        <section id="about" class="section">
 
-        <section id="about">
+            <div class="section-heading">
 
-            <h2
-                data-ko="소개"
-                data-en="About">
-                소개
-            </h2>
+                <span>01</span>
 
-            <p
-                data-ko="여기에 자기소개를 작성합니다."
-                data-en="This section contains information about me.">
-                여기에 자기소개를 작성합니다.
-            </p>
+                <h2
+                    data-ko="About"
+                    data-en="About">
+                    About
+                </h2>
+
+            </div>
+
+            <div class="about-content">
+
+                <div>
+                    <p class="large-text"
+                       data-ko="무언가를 만들고, 배우고, 기록하는 것을 좋아합니다."
+                       data-en="I enjoy building, learning, and documenting things.">
+                        무언가를 만들고, 배우고, 기록하는 것을 좋아합니다.
+                    </p>
+                </div>
+
+                <div>
+                    <p
+                        data-ko="이곳에는 앞으로 저에 대한 소개와 관심 분야, 기술 스택 등을 정리할 예정입니다."
+                        data-en="This section will contain information about me, my interests, and my technical skills.">
+                        이곳에는 앞으로 저에 대한 소개와 관심 분야,
+                        기술 스택 등을 정리할 예정입니다.
+                    </p>
+                </div>
+
+            </div>
 
         </section>
 
 
         <!-- Projects -->
+        <section id="projects" class="section">
 
-        <section id="projects">
+            <div class="section-heading">
 
-            <h2
-                data-ko="프로젝트"
-                data-en="Projects">
-                프로젝트
-            </h2>
+                <span>02</span>
 
-            <p
-                data-ko="참여 프로젝트를 이곳에 정리합니다."
-                data-en="My projects are listed here.">
-                참여 프로젝트를 이곳에 정리합니다.
-            </p>
+                <h2
+                    data-ko="Projects"
+                    data-en="Projects">
+                    Projects
+                </h2>
+
+            </div>
+
+
+            <div class="project-grid">
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        01
+                    </div>
+
+                    <h3
+                        data-ko="Project A"
+                        data-en="Project A">
+                        Project A
+                    </h3>
+
+                    <p
+                        data-ko="프로젝트에 대한 간단한 설명이 들어갈 자리입니다."
+                        data-en="A short description of the project goes here.">
+                        프로젝트에 대한 간단한 설명이 들어갈 자리입니다.
+                    </p>
+
+                    <span class="project-link">
+                        View project →
+                    </span>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        02
+                    </div>
+
+                    <h3
+                        data-ko="Project B"
+                        data-en="Project B">
+                        Project B
+                    </h3>
+
+                    <p
+                        data-ko="두 번째 프로젝트에 대한 설명입니다."
+                        data-en="A description of the second project.">
+                        두 번째 프로젝트에 대한 설명입니다.
+                    </p>
+
+                    <span class="project-link">
+                        View project →
+                    </span>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        03
+                    </div>
+
+                    <h3
+                        data-ko="Project C"
+                        data-en="Project C">
+                        Project C
+                    </h3>
+
+                    <p
+                        data-ko="세 번째 프로젝트에 대한 설명입니다."
+                        data-en="A description of the third project.">
+                        세 번째 프로젝트에 대한 설명입니다.
+                    </p>
+
+                    <span class="project-link">
+                        View project →
+                    </span>
+
+                </article>
+
+            </div>
 
         </section>
 
 
         <!-- Archive -->
+        <section id="archive" class="section">
 
-        <section id="archive">
+            <div class="section-heading">
 
-            <h2
-                data-ko="아카이브"
-                data-en="Archive">
-                아카이브
-            </h2>
+                <span>03</span>
 
-            <p
-                data-ko="공부 기록과 개인 자료를 이곳에 정리합니다."
-                data-en="My study notes and personal archive are collected here.">
-                공부 기록과 개인 자료를 이곳에 정리합니다.
-            </p>
+                <h2
+                    data-ko="Archive"
+                    data-en="Archive">
+                    Archive
+                </h2>
+
+            </div>
+
+
+            <div class="archive-list">
+
+                <article class="archive-item">
+
+                    <span>2026.09</span>
+
+                    <h3
+                        data-ko="개인 포트폴리오 사이트 구축"
+                        data-en="Building My Personal Portfolio">
+                        개인 포트폴리오 사이트 구축
+                    </h3>
+
+                    <span>→</span>
+
+                </article>
+
+
+                <article class="archive-item">
+
+                    <span>2026</span>
+
+                    <h3
+                        data-ko="공부 기록"
+                        data-en="Study Notes">
+                        공부 기록
+                    </h3>
+
+                    <span>→</span>
+
+                </article>
+
+
+                <article class="archive-item">
+
+                    <span>2026</span>
+
+                    <h3
+                        data-ko="개인 기록"
+                        data-en="Personal Notes">
+                        개인 기록
+                    </h3>
+
+                    <span>→</span>
+
+                </article>
+
+            </div>
 
         </section>
 
     </main>
 
 
+    <!-- Footer -->
     <footer>
 
-        <p>© 2026 Jihun Yang</p>
+        <div>
+            © 2026 Jihun Yang
+        </div>
+
+        <div>
+            <a href="https://github.com/JihunYangKR"
+               target="_blank">
+                GitHub ↗
+            </a>
+        </div>
 
     </footer>
 
 
     <script>
 
-        let currentLanguage = "ko";
+        /* =========================
+           Language
+        ========================= */
+
+        let currentLanguage =
+            localStorage.getItem("language") || "ko";
 
 
-        function toggleLanguage() {
-
-            currentLanguage =
-                currentLanguage === "ko" ? "en" : "ko";
-
-
-            document.documentElement.lang =
-                currentLanguage;
-
+        function updateLanguage() {
 
             const elements =
                 document.querySelectorAll("[data-ko]");
@@ -188,7 +328,7 @@
 
             elements.forEach(function(element) {
 
-                element.textContent =
+                element.innerHTML =
                     element.getAttribute(
                         "data-" + currentLanguage
                     );
@@ -196,16 +336,108 @@
             });
 
 
+            document.documentElement.lang =
+                currentLanguage;
+
+
             const button =
-                document.querySelector(".language-button");
+                document.getElementById(
+                    "language-button"
+                );
 
 
             button.textContent =
                 currentLanguage === "ko"
-                    ? "English"
-                    : "한국어";
+                    ? "EN"
+                    : "KR";
+
+
+            localStorage.setItem(
+                "language",
+                currentLanguage
+            );
 
         }
+
+
+        function toggleLanguage() {
+
+            currentLanguage =
+                currentLanguage === "ko"
+                    ? "en"
+                    : "ko";
+
+            updateLanguage();
+
+        }
+
+
+        /* =========================
+           Dark / Light Mode
+        ========================= */
+
+        let currentTheme =
+            localStorage.getItem("theme");
+
+
+        if (!currentTheme) {
+
+            currentTheme =
+                window.matchMedia(
+                    "(prefers-color-scheme: dark)"
+                ).matches
+                    ? "dark"
+                    : "light";
+
+        }
+
+
+        function updateTheme() {
+
+            document.documentElement.setAttribute(
+                "data-theme",
+                currentTheme
+            );
+
+
+            const button =
+                document.getElementById(
+                    "theme-button"
+                );
+
+
+            button.textContent =
+                currentTheme === "dark"
+                    ? "☀️"
+                    : "🌙";
+
+
+            localStorage.setItem(
+                "theme",
+                currentTheme
+            );
+
+        }
+
+
+        function toggleTheme() {
+
+            currentTheme =
+                currentTheme === "dark"
+                    ? "light"
+                    : "dark";
+
+            updateTheme();
+
+        }
+
+
+        /* =========================
+           Initial setup
+        ========================= */
+
+        updateLanguage();
+        updateTheme();
 
     </script>
 
