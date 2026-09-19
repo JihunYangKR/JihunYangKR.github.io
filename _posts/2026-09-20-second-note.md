@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My Second Archive Note"
-date: 2026-09-20
+date: 2026-09-19
 categories:
   - notes
 permalink: /notes/second-note/
