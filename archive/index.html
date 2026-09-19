@@ -1,7 +1,12 @@
+---
+layout: null
+---
+
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -15,6 +20,7 @@
         rel="stylesheet"
         href="../css/style.css"
     >
+
 </head>
 
 <body>
@@ -34,14 +40,6 @@
 
             <a href="../index.html">
                 Home
-            </a>
-
-            <a href="../index.html#about">
-                About
-            </a>
-
-            <a href="../index.html#projects">
-                Projects
             </a>
 
             <a href="index.html">
@@ -65,198 +63,261 @@
 
 <main>
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="container">
+    <div class="container">
+
+        <p class="eyebrow">
+            KNOWLEDGE ARCHIVE
+        </p>
+
+        <h1>
+            Archive
+        </h1>
+
+        <p class="hero-description">
+            A long-term collection of notes,
+            papers, projects, and useful resources.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+    <div class="section-header">
+
+        <p class="eyebrow">
+            CATEGORIES
+        </p>
+
+        <h2>
+            Browse the Archive
+        </h2>
+
+    </div>
+
+
+    <div class="project-grid">
+
+
+        <a
+            href="notes/index.html"
+            class="project-card"
+        >
 
             <p class="eyebrow">
-                ARCHIVE
+                NOTES
             </p>
 
-            <h1>
-                Knowledge & Records
-            </h1>
+            <h3>
+                Notes
+            </h3>
 
-            <p class="hero-description">
-                Notes, papers, projects, and resources
-                collected over time.
+            <p>
+                Personal notes, ideas, study materials,
+                and things worth remembering.
             </p>
 
-        </div>
+            <span>
+                {% assign count = 0 %}
 
-    </section>
+                {% for post in site.posts %}
+
+                    {% if post.categories contains "notes" %}
+
+                        {% assign count = count | plus: 1 %}
+
+                    {% endif %}
+
+                {% endfor %}
+
+                {{ count }} posts →
+            </span>
+
+        </a>
 
 
-    <section>
+        <a
+            href="papers/index.html"
+            class="project-card"
+        >
 
-        <div class="container">
+            <p class="eyebrow">
+                PAPERS
+            </p>
 
-            <div class="section-header">
+            <h3>
+                Papers
+            </h3>
 
-                <p class="eyebrow">
-                    CATEGORIES
+            <p>
+                Paper notes, literature reviews,
+                research ideas, and references.
+            </p>
+
+            <span>
+
+                {% assign count = 0 %}
+
+                {% for post in site.posts %}
+
+                    {% if post.categories contains "papers" %}
+
+                        {% assign count = count | plus: 1 %}
+
+                    {% endif %}
+
+                {% endfor %}
+
+                {{ count }} posts →
+
+            </span>
+
+        </a>
+
+
+        <a
+            href="projects/index.html"
+            class="project-card"
+        >
+
+            <p class="eyebrow">
+                PROJECTS
+            </p>
+
+            <h3>
+                Projects
+            </h3>
+
+            <p>
+                Personal projects, experiments,
+                implementations, and technical records.
+            </p>
+
+            <span>
+
+                {% assign count = 0 %}
+
+                {% for post in site.posts %}
+
+                    {% if post.categories contains "projects" %}
+
+                        {% assign count = count | plus: 1 %}
+
+                    {% endif %}
+
+                {% endfor %}
+
+                {{ count }} posts →
+
+            </span>
+
+        </a>
+
+
+        <a
+            href="resources/index.html"
+            class="project-card"
+        >
+
+            <p class="eyebrow">
+                RESOURCES
+            </p>
+
+            <h3>
+                Resources
+            </h3>
+
+            <p>
+                Useful references, tools, links,
+                books, and materials worth keeping.
+            </p>
+
+            <span>
+
+                {% assign count = 0 %}
+
+                {% for post in site.posts %}
+
+                    {% if post.categories contains "resources" %}
+
+                        {% assign count = count | plus: 1 %}
+
+                    {% endif %}
+
+                {% endfor %}
+
+                {{ count }} posts →
+
+            </span>
+
+        </a>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+    <div class="section-header">
+
+        <p class="eyebrow">
+            RECENT RECORDS
+        </p>
+
+        <h2>
+            Latest Posts
+        </h2>
+
+    </div>
+
+
+    <div class="archive-list">
+
+        {% for post in site.posts limit:5 %}
+
+        <a href="{{ post.url }}">
+
+            <div>
+
+                <span class="archive-date">
+                    {{ post.date | date: "%Y-%m-%d" }}
+                </span>
+
+                <h3>
+                    {{ post.title }}
+                </h3>
+
+                <p>
+                    {{ post.excerpt | strip_html | truncate: 120 }}
                 </p>
 
-                <h2>
-                    Explore the Archive
-                </h2>
-
             </div>
 
+            <span>
+                →
+            </span>
 
-            <div class="project-grid">
+        </a>
 
-                <a
-                    href="notes/index.html"
-                    class="project-card"
-                >
+        {% endfor %}
 
-                    <span class="project-number">
-                        01
-                    </span>
+    </div>
 
-                    <h3>
-                        Notes
-                    </h3>
+</div>
 
-                    <p>
-                        Personal notes, study materials,
-                        and ideas.
-                    </p>
-
-                </a>
-
-
-                <a
-                    href="papers/index.html"
-                    class="project-card"
-                >
-
-                    <span class="project-number">
-                        02
-                    </span>
-
-                    <h3>
-                        Papers
-                    </h3>
-
-                    <p>
-                        Papers, research materials,
-                        and academic references.
-                    </p>
-
-                </a>
-
-
-                <a
-                    href="projects/index.html"
-                    class="project-card"
-                >
-
-                    <span class="project-number">
-                        03
-                    </span>
-
-                    <h3>
-                        Projects
-                    </h3>
-
-                    <p>
-                        Project documentation,
-                        experiments, and development logs.
-                    </p>
-
-                </a>
-
-
-                <a
-                    href="resources/index.html"
-                    class="project-card"
-                >
-
-                    <span class="project-number">
-                        04
-                    </span>
-
-                    <h3>
-                        Resources
-                    </h3>
-
-                    <p>
-                        Useful references, tools,
-                        links, and materials.
-                    </p>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section>
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <p class="eyebrow">
-                    RECENT
-                </p>
-
-                <h2>
-                    Recent Records
-                </h2>
-
-            </div>
-
-
-            <div class="archive-list">
-
-                <a href="#">
-
-                    <div>
-                        <span class="archive-date">
-                            2026
-                        </span>
-
-                        <h3>
-                            Getting Started with the Archive
-                        </h3>
-                    </div>
-
-                    <span>
-                        →
-                    </span>
-
-                </a>
-
-
-                <a href="#">
-
-                    <div>
-                        <span class="archive-date">
-                            2026
-                        </span>
-
-                        <h3>
-                            Portfolio Development Notes
-                        </h3>
-                    </div>
-
-                    <span>
-                        →
-                    </span>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
+</section>
 
 </main>
 
@@ -268,9 +329,11 @@
     </div>
 
     <div>
+
         <a href="../index.html">
-            Back to Home ↑
+            ← Back to Home
         </a>
+
     </div>
 
 </footer>
@@ -279,4 +342,5 @@
 <script src="../js/main.js"></script>
 
 </body>
+
 </html>
