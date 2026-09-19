@@ -502,7 +502,13 @@ layout: null
 
         }
 
-
+        
+        searchResults.innerHTML =
+            `<p class="search-count">
+                ${results.length} posts found
+            </p>` +
+            results.map(function(post) {
+        
         searchResults.innerHTML =
             results.map(function(post) {
 
