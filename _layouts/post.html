@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="{{ site.lang | default: 'ko' }}">
 
 <head>
 
@@ -11,8 +11,68 @@
     >
 
     <title>
-        {{ page.title }} — Jihun Yang
+        {{ page.title }} — {{ site.title }}
     </title>
+
+
+    <meta
+        name="description"
+        content="{{ page.description | default: page.excerpt | strip_html | normalize_whitespace | escape }}"
+    >
+
+    <meta
+        name="author"
+        content="{{ site.author.name | escape }}"
+    >
+
+
+    <link
+        rel="canonical"
+        href="{{ page.url | absolute_url }}"
+    >
+
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="{{ page.title | escape }}"
+    >
+
+    <meta
+        property="og:description"
+        content="{{ page.description | default: page.excerpt | strip_html | normalize_whitespace | escape }}"
+    >
+
+    <meta
+        property="og:type"
+        content="article"
+    >
+
+    <meta
+        property="og:url"
+        content="{{ page.url | absolute_url }}"
+    >
+
+    <meta
+        property="article:published_time"
+        content="{{ page.date | date_to_xmlschema }}"
+    >
+
+
+    {% if page.tags %}
+
+        {% for tag in page.tags %}
+
+        <meta
+            property="article:tag"
+            content="{{ tag | escape }}"
+        >
+
+        {% endfor %}
+
+    {% endif %}
+
 
     <link
         rel="stylesheet"
@@ -20,6 +80,7 @@
     >
 
 </head>
+
 
 <body>
 
@@ -33,6 +94,7 @@
         >
             Jihun Yang
         </a>
+
 
         <nav>
 
@@ -109,66 +171,67 @@
 
     {% endif %}
 
-</div>
 
-{% if page.previous or page.next %}
+    {% if page.previous or page.next %}
 
-<div
-    style="
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        margin-top: 50px;
-        padding-top: 30px;
-        border-top: 1px solid var(--border-color);
-    "
->
+    <div
+        style="
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        "
+    >
 
-    <div>
+        <div>
 
-        {% if page.previous %}
+            {% if page.previous %}
 
-        <a href="{{ page.previous.url }}">
+            <a href="{{ page.previous.url }}">
 
-            ← Previous
+                ← Previous
 
-            <br>
+                <br>
 
-            <strong>
-                {{ page.previous.title }}
-            </strong>
+                <strong>
+                    {{ page.previous.title }}
+                </strong>
 
-        </a>
+            </a>
 
-        {% endif %}
+            {% endif %}
+
+        </div>
+
+
+        <div style="text-align: right;">
+
+            {% if page.next %}
+
+            <a href="{{ page.next.url }}">
+
+                Next →
+
+                <br>
+
+                <strong>
+                    {{ page.next.title }}
+                </strong>
+
+            </a>
+
+            {% endif %}
+
+        </div>
 
     </div>
 
-
-    <div style="text-align: right;">
-
-        {% if page.next %}
-
-        <a href="{{ page.next.url }}">
-
-            Next →
-
-            <br>
-
-            <strong>
-                {{ page.next.title }}
-            </strong>
-
-        </a>
-
-        {% endif %}
-
-    </div>
+    {% endif %}
 
 </div>
 
-{% endif %}
-    
 </section>
 
 </main>
