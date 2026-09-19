@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {{ page.title }} — Jihun Yang
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a
+            href="/"
+            class="logo"
+        >
+            Jihun Yang
+        </a>
+
+        <nav>
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/#about">
+                About
+            </a>
+
+            <a href="/#projects">
+                Projects
+            </a>
+
+            <a href="/archive/">
+                Archive
+            </a>
+
+            <button
+                id="theme-button"
+                class="icon-button"
+                onclick="toggleTheme()"
+            >
+                🌙
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    {{ content }}
+
+</main>
+
+
+<footer>
+
+    <div>
+        © 2026 Jihun Yang
+    </div>
+
+    <div>
+        <a href="/archive/">
+            Back to Archive ↑
+        </a>
+    </div>
+
+</footer>
+
+
+<script src="/js/main.js"></script>
+
+</body>
+
+</html>
