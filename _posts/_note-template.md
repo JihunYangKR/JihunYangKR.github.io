@@ -7,7 +7,6 @@ categories:
 tags:
   - tag1
   - tag2
-permalink: /notes/your-title/
 ---
 
 # 제목을 입력하세요
