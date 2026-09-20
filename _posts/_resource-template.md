@@ -7,7 +7,6 @@ categories:
 tags:
   - resource
   - reference
-permalink: /resources/your-resource-title/
 ---
 
 # 자료 제목을 입력하세요
