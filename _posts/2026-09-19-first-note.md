@@ -37,3 +37,19 @@ Hello, Archive!
 ## Image Test
 
 ![Test Image](/assets/images/notes/DAN02341.jpg)
+
+## Math Test
+
+인라인 수식: $E = mc^2$
+
+블록 수식:
+
+$$
+E = mc^2
+$$
+
+또 다른 예제:
+
+$$
+\int_0^1 x^2\,dx = \frac{1}{3}
+$$
