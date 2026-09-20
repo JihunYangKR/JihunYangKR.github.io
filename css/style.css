@@ -1039,3 +1039,26 @@ footer {
     opacity: 0.65;
     line-height: 1.5;
 }
+
+.archive-search {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--card-background);
+    color: var(--text-color);
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.archive-search:focus {
+    border-color: var(--text-color);
+    box-shadow: 0 0 0 3px var(--border-color);
+}
+
+.archive-search::placeholder {
+    color: var(--text-color);
+    opacity: 0.5;
+}
