@@ -159,7 +159,17 @@
         </h1>
 
         <p class="hero-description">
+
+            Published:
             {{ page.date | date: "%Y-%m-%d" }}
+    
+            {% if page.updated %}
+
+                · Updated:
+                {{ page.updated | date: "%Y-%m-%d" }}
+
+            {% endif %}
+
         </p>
 
     </div>
