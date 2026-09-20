@@ -148,6 +148,21 @@
 
 <div class="container">
 
+    {% if page.toc != false %}
+
+    <nav class="post-toc">
+
+        <h2>
+            Table of Contents
+        </h2>
+
+        <div id="post-toc"></div>
+
+    </nav>
+
+    {% endif %}
+
+
     <article class="post-content">
 
         {{ content }}
@@ -255,6 +270,75 @@
 
 
 <script src="{{ '/js/main.js' | relative_url }}"></script>
+
+
+<script>
+
+    const postContent =
+        document.querySelector(".post-content");
+
+    const toc =
+        document.getElementById("post-toc");
+
+
+    if (postContent && toc) {
+
+        const headings =
+            postContent.querySelectorAll("h2, h3");
+
+
+        if (headings.length === 0) {
+
+            const tocContainer =
+                document.querySelector(".post-toc");
+
+            if (tocContainer) {
+                tocContainer.remove();
+            }
+
+        } else {
+
+            headings.forEach(function(heading, index) {
+
+                if (!heading.id) {
+
+                    heading.id =
+                        "section-" + (index + 1);
+
+                }
+
+            });
+
+
+            headings.forEach(function(heading) {
+
+                const link =
+                    document.createElement("a");
+
+                link.href =
+                    "#" + heading.id;
+
+                link.textContent =
+                    heading.textContent;
+
+                if (heading.tagName === "H3") {
+
+                    link.classList.add(
+                        "toc-sub"
+                    );
+
+                }
+
+                toc.appendChild(link);
+
+            });
+
+        }
+
+    }
+
+</script>
+
 
 </body>
 
