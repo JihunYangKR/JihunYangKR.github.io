@@ -2,6 +2,7 @@
 layout: post
 title: "My First Archive Note"
 date: 2026-09-19
+updated: 2026-09-20
 categories:
   - notes
 permalink: /notes/first-note/
