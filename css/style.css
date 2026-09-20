@@ -988,3 +988,34 @@ footer {
     margin: 30px auto;
     border-radius: 10px;
 }
+
+.post-toc {
+    max-width: 760px;
+    margin: 0 auto 40px;
+    padding: 22px 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--card-background);
+}
+
+.post-toc h2 {
+    margin: 0 0 15px;
+    font-size: 1.1rem;
+}
+
+.post-toc a {
+    display: block;
+    margin: 7px 0;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.post-toc a:hover {
+    text-decoration: underline;
+}
+
+.post-toc .toc-sub {
+    padding-left: 18px;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
