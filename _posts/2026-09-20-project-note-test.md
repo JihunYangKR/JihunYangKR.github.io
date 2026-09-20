@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Project Note — Jekyll 구조 정리"
-date: 2026-09-21
+date: 2026-09-20
 categories:
   - notes
 project: portfolio-site
