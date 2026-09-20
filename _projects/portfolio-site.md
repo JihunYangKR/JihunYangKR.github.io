@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Personal Portfolio & Knowledge Archive"
 description: "개인 포트폴리오와 장기 지식 아카이브를 구축하는 프로젝트"
 status: "In Progress"
