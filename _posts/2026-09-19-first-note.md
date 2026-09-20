@@ -36,7 +36,18 @@ Hello, Archive!
 
 ## Image Test
 
-![Test Image](/assets/images/notes/DAN02341.jpg)
+<figure class="post-image">
+
+    <img
+        src="/assets/images/notes/DAN02341.jpg"
+        alt="Test Image"
+    >
+
+    <figcaption>
+        테스트 이미지 — 첫 번째 아카이브 이미지
+    </figcaption>
+
+</figure>
 
 ## Math Test
 
