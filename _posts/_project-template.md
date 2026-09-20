@@ -7,7 +7,6 @@ categories:
 tags:
   - project
   - development
-permalink: /projects/your-project-title/
 ---
 
 # 프로젝트 이름을 입력하세요
