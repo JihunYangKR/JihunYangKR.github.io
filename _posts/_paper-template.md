@@ -7,7 +7,6 @@ categories:
 tags:
   - paper
   - research
-permalink: /papers/your-paper-title/
 ---
 
 # 논문 제목을 입력하세요
