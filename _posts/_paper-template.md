@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "논문 제목을 입력하세요"
-date: 2026-09-19
+date: YYYY-MM-DD
 categories:
   - papers
 tags:
