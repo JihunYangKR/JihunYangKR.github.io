@@ -161,40 +161,82 @@ layout: null
 
             <div class="project-grid">
 
-                {% assign project_posts = site.posts
-                    | where_exp: "post", "post.categories contains 'projects'"
-                %}
+                <article class="project-card">
 
-                {% for post in project_posts limit:3 %}
+                    <div class="project-number">
+                        01
+                    </div>
 
-                    <article class="project-card">
+                    <h3
+                        data-ko="Project A"
+                        data-en="Project A">
+                        Project A
+                    </h3>
 
-                        <div class="project-number">
-                            {{ forloop.index | prepend: "0" }}
-                        </div>
+                    <p
+                        data-ko="프로젝트에 대한 간단한 설명이 들어갈 자리입니다."
+                        data-en="A short description of the project goes here.">
+                        프로젝트에 대한 간단한 설명이 들어갈 자리입니다.
+                    </p>
 
-                        <h3>
-                            {{ post.title }}
-                        </h3>
+                    <a
+                        href="projects/project-a.html"
+                        class="project-link">
+                        View project →
+                    </a>
 
-                        <p>
-                            {{ post.excerpt
-                                | strip_html
-                                | truncate: 140 }}
-                        </p>
+                </article>
 
-                        <a
-                            href="{{ post.url | relative_url }}"
-                            class="project-link">
-                            View project →
-                        </a>
+                <article class="project-card">
 
-                    </article>
+                    <div class="project-number">
+                        02
+                    </div>
 
-                {% endfor %}
+                    <h3
+                        data-ko="Project B"
+                        data-en="Project B">
+                        Project B
+                    </h3>
 
+                    <p
+                        data-ko="두 번째 프로젝트에 대한 설명입니다."
+                        data-en="A description of the second project.">
+                        두 번째 프로젝트에 대한 설명입니다.
+                    </p>
+
+                    <span class="project-link">
+                        View project →
+                    </span>
+
+                </article>
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        03
+                    </div>
+
+                    <h3
+                        data-ko="Project C"
+                        data-en="Project C">
+                        Project C
+                    </h3>
+
+                    <p
+                        data-ko="세 번째 프로젝트에 대한 설명입니다."
+                        data-en="A description of the third project.">
+                        세 번째 프로젝트에 대한 설명입니다.
+                    </p>
+            
+                    <span class="project-link">
+                        View project →
+                    </span>
+            
+                </article>
+            
             </div>
-
+            
         </section>
 
 
