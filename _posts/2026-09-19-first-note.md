@@ -33,3 +33,7 @@ Markdown을 사용하면 HTML을 직접 작성하지 않고도
 Hello, Archive!
 
 앞으로 이 Archive를 장기적인 지식 저장소로 발전시킬 예정이다.
+
+## Image Test
+
+![Test Image](/assets/images/notes/DAN02341.jpg)
