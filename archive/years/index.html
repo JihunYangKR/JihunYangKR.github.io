@@ -1,0 +1,175 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Archive by Year — Jihun Yang
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ '/css/style.css' | relative_url }}"
+    >
+
+</head>
+
+
+<body>
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a
+            href="{{ '/' | relative_url }}"
+            class="logo"
+        >
+            Jihun Yang
+        </a>
+
+        <nav>
+
+            <a href="{{ '/' | relative_url }}">
+                Home
+            </a>
+
+            <a href="{{ '/archive/' | relative_url }}">
+                Archive
+            </a>
+
+            <button
+                id="theme-button"
+                class="icon-button"
+                onclick="toggleTheme()"
+            >
+                🌙
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="container">
+
+        <p class="eyebrow">
+            ARCHIVE
+        </p>
+
+        <h1>
+            Archive by Year
+        </h1>
+
+        <p class="hero-description">
+            Browse archived records by year.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+    {% assign posts_by_year = site.posts
+        | group_by_exp: "post", "post.date | date: '%Y'"
+    %}
+
+    {% for year in posts_by_year %}
+
+        <div class="archive-year">
+
+            <h2>
+                {{ year.name }}
+            </h2>
+
+            <div class="archive-list">
+
+                {% for post in year.items %}
+
+                    <a
+                        href="{{ post.url | relative_url }}"
+                        class="archive-item"
+                    >
+
+                        <div>
+
+                            <span class="archive-date">
+                                {{ post.date | date: "%Y-%m-%d" }}
+                            </span>
+
+                            <h3>
+                                {{ post.title }}
+                            </h3>
+
+                            <p>
+                                {{ post.excerpt
+                                    | strip_html
+                                    | truncate: 160 }}
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        © 2026 Jihun Yang
+    </div>
+
+    <div>
+
+        <a href="{{ '/archive/' | relative_url }}">
+            ← Archive
+        </a>
+
+    </div>
+
+</footer>
+
+
+<script src="{{ '/js/main.js' | relative_url }}"></script>
+
+</body>
+
+</html>
