@@ -13,3 +13,8 @@ markdown: kramdown
 theme: null
 
 permalink: /:categories/:title/
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
