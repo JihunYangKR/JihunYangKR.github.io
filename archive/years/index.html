@@ -131,6 +131,26 @@ layout: null
                                 {{ post.title }}
                             </h3>
 
+                            <div class="search-meta">
+
+                                {% for category in post.categories %}
+
+                                    <span class="tag">
+                                        {{ category }}
+                                    </span>
+
+                                {% endfor %}
+
+                                {% for tag in post.tags %}
+
+                                    <span class="tag">
+                                        #{{ tag }}
+                                    </span>
+
+                                {% endfor %}
+
+                            </div>
+
                             <p>
                                 {{ post.excerpt
                                     | strip_html
