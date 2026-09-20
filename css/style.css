@@ -1019,3 +1019,23 @@ footer {
     font-size: 0.95rem;
     opacity: 0.8;
 }
+
+.post-image {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.post-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.post-image figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    opacity: 0.65;
+    line-height: 1.5;
+}
