@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "프로젝트 이름을 입력하세요"
-date: YYYY-MM-DD
+date: YYYY-MM-DD 
 categories:
   - projects
 tags:
