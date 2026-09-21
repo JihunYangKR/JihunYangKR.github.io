@@ -535,8 +535,8 @@ footer {
     .mobile-menu {
         display: none;
         flex-direction: column;
-        gap: 0;
-        padding: 0 20px 18px;
+        gap: 4px;
+        padding: 10px 20px 20px;
         border-top: 1px solid var(--border);
         background: var(--background);
     }
