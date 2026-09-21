@@ -308,10 +308,10 @@ main {
 
 
 /* =========================
-   Projects
+   Profiles
    ========================= */
 
-.project-grid {
+.profile-grid {
     display: grid;
 
     grid-template-columns:
@@ -320,7 +320,7 @@ main {
     gap: 16px;
 }
 
-.project-card {
+.profile-card {
     min-height: 300px;
 
     padding: 28px;
@@ -336,29 +336,29 @@ main {
         border var(--transition);
 }
 
-.project-card:hover {
+.profile-card:hover {
     transform: translateY(-5px);
 
     border:
         1px solid var(--border);
 }
 
-.project-number {
+.profile-number {
     color: var(--muted);
     font-size: 13px;
 }
 
-.project-card h3 {
+.profile-card h3 {
     margin-top: 70px;
 
     font-size: 24px;
 }
 
-.project-card p {
+.profile-card p {
     color: var(--muted);
 }
 
-.project-link {
+.profile-link {
     display: inline-block;
 
     margin-top: 20px;
@@ -480,12 +480,12 @@ footer {
         font-size: 23px;
     }
 
-    .project-grid {
+    .profile-grid {
         grid-template-columns:
             1fr;
     }
 
-    .project-card {
+    .profile-card {
         min-height: 250px;
     }
 
@@ -493,7 +493,7 @@ footer {
        flex-wrap: wrap;
    }
 
-    .project-card h3 {
+    .profile-card h3 {
         margin-top: 45px;
     }
 
