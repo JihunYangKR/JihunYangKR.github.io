@@ -103,6 +103,15 @@
 
         {% endif %}
 
+        {% if page.date %}
+
+            <p class="hero-description">
+                Started:
+                {{ page.date | date: "%Y-%m-%d" }}
+            </p>
+        
+        {% endif %}
+
     </div>
 
 </section>
