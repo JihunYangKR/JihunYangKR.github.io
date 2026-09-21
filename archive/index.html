@@ -104,208 +104,92 @@ layout: null
 
     <div class="project-grid">
 
-
         <a
-            href="notes/index.html"
+            href="photography/index.html"
             class="project-card"
         >
-
+    
             <p class="eyebrow">
-                NOTES
+                PROJECT
             </p>
-
+    
             <h3>
-                Notes
+                Photography
             </h3>
-
+    
             <p>
-                Personal notes, ideas, study materials,
-                and things worth remembering.
+                Photography와 관련된 모든 기록과
+                프로젝트 아카이브를 모아둡니다.
             </p>
-
+    
             <span>
+    
                 {% assign count = 0 %}
-
+    
                 {% for post in site.posts %}
-
-                    {% if post.categories contains "notes" %}
-
+    
+                    {% if post.categories contains "photography" %}
+    
                         {% assign count = count | plus: 1 %}
-
+    
                     {% endif %}
-
+    
                 {% endfor %}
-
+    
                 {{ count }} posts →
+    
             </span>
-
-        </a>
-
-
-        <a
-            href="papers/index.html"
-            class="project-card"
-        >
-
-            <p class="eyebrow">
-                PAPERS
-            </p>
-
-            <h3>
-                Papers
-            </h3>
-
-            <p>
-                Paper notes, literature reviews,
-                research ideas, and references.
-            </p>
-
-            <span>
-
-                {% assign count = 0 %}
-
-                {% for post in site.posts %}
-
-                    {% if post.categories contains "papers" %}
-
-                        {% assign count = count | plus: 1 %}
-
-                    {% endif %}
-
-                {% endfor %}
-
-                {{ count }} posts →
-
-            </span>
-
-        </a>
-
-
-        <a
-            href="projects/index.html"
-            class="project-card"
-        >
-
-            <p class="eyebrow">
-                PROJECTS
-            </p>
-
-            <h3>
-                Projects
-            </h3>
-
-            <p>
-                Personal projects, experiments,
-                implementations, and technical records.
-            </p>
-
-            <span>
-
-                {% assign count = 0 %}
-
-                {% for post in site.posts %}
-
-                    {% if post.categories contains "projects" %}
-
-                        {% assign count = count | plus: 1 %}
-
-                    {% endif %}
-
-                {% endfor %}
-
-                {{ count }} posts →
-
-            </span>
-
-        </a>
-
-
-        <a
-            href="resources/index.html"
-            class="project-card"
-        >
-
-            <p class="eyebrow">
-                RESOURCES
-            </p>
-
-            <h3>
-                Resources
-            </h3>
-
-            <p>
-                Useful references, tools, links,
-                books, and materials worth keeping.
-            </p>
-
-            <span>
-
-                {% assign count = 0 %}
-
-                {% for post in site.posts %}
-
-                    {% if post.categories contains "resources" %}
-
-                        {% assign count = count | plus: 1 %}
-
-                    {% endif %}
-
-                {% endfor %}
-
-                {{ count }} posts →
-
-            </span>
-
-        </a>
-
+    
+        </a>    
+    
         <a
             href="tags/index.html"
             class="project-card"
         >
-
+    
             <p class="eyebrow">
                 TAGS
             </p>
-
+    
             <h3>
                 Browse by Tags
             </h3>
-
+    
             <p>
-                Explore notes and records
-                by topic and keyword.
+                Explore records by topic and keyword.
             </p>
-
+    
             <span>
                 View Tags →
             </span>
-
+    
         </a>
-
+    
+    
         <a
             href="years/index.html"
             class="project-card"
         >
-
+    
             <p class="eyebrow">
                 YEARS
             </p>
-
+    
             <h3>
                 Browse by Year
             </h3>
-
+    
             <p>
-                Explore archived records
-                by year.
+                Explore archived records by year.
             </p>
-        
+    
             <span>
                 View Years →
             </span>
-
+    
         </a>
-
+    
+    
     </div>
 
 </div>
