@@ -487,6 +487,10 @@ footer {
         min-height: 250px;
     }
 
+   .hero-buttons {
+       flex-wrap: wrap;
+   }
+
     .project-card h3 {
         margin-top: 45px;
     }
@@ -987,5 +991,18 @@ footer {
     .post-image {
         margin:
             24px auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
     }
 }
