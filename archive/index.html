@@ -110,7 +110,7 @@ layout: null
         {% for project in archive_projects %}
     
             <a
-                href="{{ project.url | relative_url }}"
+                href="{{ '/archive/' | append: project.slug | append: '/' | relative_url }}"
                 class="project-card"
             >
     
@@ -258,7 +258,7 @@ layout: null
 
         {% for post in site.posts limit:5 %}
 
-        <a href="{{ post.url }}">
+        <a href="{{ post.url | relative_url }}" class="archive-item">
 
             <div>
 
