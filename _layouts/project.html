@@ -142,163 +142,45 @@
 
         {% assign project_records = site.posts
             | where_exp: "post", "post.categories contains page.slug" %}
-
-
-        <!-- Notes -->
-
-        {% assign project_notes = project_records
-            | where_exp: "post", "post.categories contains 'notes'" %}
-
-        {% if project_notes.size > 0 %}
-
-            <div class="project-archive-group">
-
-                <h3>
-                    Notes
-                </h3>
-
-                <div class="archive-list">
-
-                    {% for post in project_notes %}
-
-                        <a
-                            href="{{ post.url | relative_url }}"
-                            class="archive-item">
-
-                            <div>
-
-                                <span class="archive-date">
-                                    {{ post.date | date: "%Y-%m-%d" }}
-                                </span>
-
-                                <h3>
-                                    {{ post.title }}
-                                </h3>
-
-                                <p>
-                                    {{ post.excerpt
-                                        | strip_html
-                                        | truncate: 160 }}
-                                </p>
-
-                            </div>
-
-                            <span>→</span>
-
-                        </a>
-
-                    {% endfor %}
-
-                </div>
-
+        
+        {% if project_records.size > 0 %}
+        
+            <div class="archive-list">
+        
+                {% for post in project_records %}
+        
+                    <a
+                        href="{{ post.url | relative_url }}"
+                        class="archive-item">
+        
+                        <div>
+        
+                            <span class="archive-date">
+                                {{ post.date | date: "%Y-%m-%d" }}
+                            </span>
+        
+                            <h3>
+                                {{ post.title }}
+                            </h3>
+        
+                            <p>
+                                {{ post.excerpt
+                                    | strip_html
+                                    | truncate: 160 }}
+                            </p>
+        
+                        </div>
+        
+                        <span>→</span>
+        
+                    </a>
+        
+                {% endfor %}
+        
             </div>
-
+        
         {% endif %}
-
-
-        <!-- Papers -->
-
-        {% assign project_papers = project_records
-            | where_exp: "post", "post.categories contains 'papers'" %}
-
-        {% if project_papers.size > 0 %}
-
-            <div class="project-archive-group">
-
-                <h3>
-                    Papers
-                </h3>
-
-                <div class="archive-list">
-
-                    {% for post in project_papers %}
-
-                        <a
-                            href="{{ post.url | relative_url }}"
-                            class="archive-item">
-
-                            <div>
-
-                                <span class="archive-date">
-                                    {{ post.date | date: "%Y-%m-%d" }}
-                                </span>
-
-                                <h3>
-                                    {{ post.title }}
-                                </h3>
-
-                                <p>
-                                    {{ post.excerpt
-                                        | strip_html
-                                        | truncate: 160 }}
-                                </p>
-
-                            </div>
-
-                            <span>→</span>
-
-                        </a>
-
-                    {% endfor %}
-
-                </div>
-
-            </div>
-
-        {% endif %}
-
-
-        <!-- Resources -->
-
-        {% assign project_resources = project_records
-            | where_exp: "post", "post.categories contains 'resources'" %}
-
-        {% if project_resources.size > 0 %}
-
-            <div class="project-archive-group">
-
-                <h3>
-                    Resources
-                </h3>
-
-                <div class="archive-list">
-
-                    {% for post in project_resources %}
-
-                        <a
-                            href="{{ post.url | relative_url }}"
-                            class="archive-item">
-
-                            <div>
-
-                                <span class="archive-date">
-                                    {{ post.date | date: "%Y-%m-%d" }}
-                                </span>
-
-                                <h3>
-                                    {{ post.title }}
-                                </h3>
-
-                                <p>
-                                    {{ post.excerpt
-                                        | strip_html
-                                        | truncate: 160 }}
-                                </p>
-
-                            </div>
-
-                            <span>→</span>
-
-                        </a>
-
-                    {% endfor %}
-
-                </div>
-
-            </div>
-
-        {% endif %}
-
+        
     </div>
 
 </section>
