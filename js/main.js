@@ -108,3 +108,35 @@ function toggleTheme() {
 
 updateLanguage();
 updateTheme();
+
+function toggleMobileMenu() {
+    const menu =
+        document.getElementById("mobile-menu");
+
+    const button =
+        document.getElementById(
+            "mobile-menu-button"
+        );
+
+    if (!menu || !button) {
+        return;
+    }
+
+    const isOpen =
+        menu.classList.toggle("open");
+
+    button.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+    );
+
+    button.setAttribute(
+        "aria-label",
+        isOpen
+            ? "Close navigation menu"
+            : "Open navigation menu"
+    );
+
+    button.textContent =
+        isOpen ? "✕" : "☰";
+}
