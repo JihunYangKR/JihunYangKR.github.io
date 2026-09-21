@@ -15,6 +15,6 @@ theme: null
 permalink: /:categories/:title/
 
 collections:
-  projects:
+  profiles:
     output: true
-    permalink: /projects/:name/
+    permalink: /profiles/:name/
