@@ -144,7 +144,7 @@
             | where_exp: "post", "post.categories contains page.slug" %}
         
         {% if project_records.size > 0 %}
-        
+
             <div class="archive-list">
         
                 {% for post in project_records %}
@@ -178,6 +178,12 @@
                 {% endfor %}
         
             </div>
+        
+        {% else %}
+        
+            <p>
+                아직 등록된 기록이 없습니다.
+            </p>
         
         {% endif %}
         
