@@ -141,7 +141,7 @@
 
 
         {% assign project_records = site.posts
-            | where: "project", page.slug %}
+            | where_exp: "post", "post.categories contains page.slug" %}
 
 
         <!-- Notes -->
