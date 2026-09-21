@@ -514,6 +514,50 @@ footer {
     }
 }
 
+/* =========================
+   Mobile Navigation
+   ========================= */
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu-button {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    .mobile-menu-button {
+        display: inline-flex;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        padding: 0 20px 18px;
+        border-top: 1px solid var(--border);
+        background: var(--background);
+    }
+
+    .mobile-menu.open {
+        display: flex;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 15px;
+    }
+
+    .mobile-menu a:last-child {
+        border-bottom: none;
+    }
+
+}
+
 
 /* =========================
    Post / Article
