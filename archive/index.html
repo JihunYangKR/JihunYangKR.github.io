@@ -18,7 +18,7 @@ layout: null
 
     <link
         rel="stylesheet"
-        href="../css/style.css"
+        href="{{ '/css/style.css' | relative_url }}"
     >
 
 </head>
@@ -43,8 +43,7 @@ layout: null
         </h1>
 
         <p class="hero-description">
-            A long-term collection of notes,
-            papers, projects, and useful resources.
+            A long-term collection of knowledge, records, and resources.
         </p>
 
     </div>
@@ -189,7 +188,7 @@ layout: null
         type="search"
         id="archive-search"
         class="archive-search"
-        placeholder="Search notes, papers, projects..."
+        placeholder="Search archive..."
     >
 
     <div
@@ -268,7 +267,7 @@ layout: null
 
     <div>
 
-        <a href="../index.html">
+        <a href="{{ '/' | relative_url }}">
             ← Back to Home
         </a>
 
@@ -277,7 +276,7 @@ layout: null
 </footer>
 
 
-<script src="../js/main.js"></script>
+<script src="{{ '/js/main.js' | relative_url }}"></script>
 
 <script>
 
