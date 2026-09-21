@@ -1,26 +1,18 @@
+/* =========================
+   Language
+   ========================= */
+
 let currentLanguage =
     localStorage.getItem("language") || "ko";
 
-let currentTheme =
-    localStorage.getItem("theme");
-
-if (!currentTheme) {
-    currentTheme =
-        window.matchMedia(
-            "(prefers-color-scheme: dark)"
-        ).matches ? "dark" : "light";
-}
-
-
-// ==============================
-// Language
-// ==============================
 
 function updateLanguage() {
+
     const elements =
         document.querySelectorAll("[data-ko]");
 
     elements.forEach(function(element) {
+
         const value =
             element.getAttribute(
                 "data-" + currentLanguage
@@ -54,6 +46,7 @@ function updateLanguage() {
 
 
 function toggleLanguage() {
+
     currentLanguage =
         currentLanguage === "ko"
             ? "en"
@@ -63,11 +56,27 @@ function toggleLanguage() {
 }
 
 
-// ==============================
-// Theme
-// ==============================
+/* =========================
+   Theme
+   ========================= */
+
+let currentTheme =
+    localStorage.getItem("theme");
+
+
+if (!currentTheme) {
+
+    currentTheme =
+        window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        ).matches
+            ? "dark"
+            : "light";
+}
+
 
 function updateTheme() {
+
     document.documentElement.setAttribute(
         "data-theme",
         currentTheme
@@ -79,6 +88,7 @@ function updateTheme() {
         );
 
     if (button) {
+
         button.textContent =
             currentTheme === "dark"
                 ? "☀️"
@@ -93,6 +103,7 @@ function updateTheme() {
 
 
 function toggleTheme() {
+
     currentTheme =
         currentTheme === "dark"
             ? "light"
@@ -102,16 +113,16 @@ function toggleTheme() {
 }
 
 
-// ==============================
-// Initialize
-// ==============================
-
-updateLanguage();
-updateTheme();
+/* =========================
+   Mobile Navigation
+   ========================= */
 
 function toggleMobileMenu() {
+
     const menu =
-        document.getElementById("mobile-menu");
+        document.getElementById(
+            "mobile-menu"
+        );
 
     const button =
         document.getElementById(
@@ -138,8 +149,55 @@ function toggleMobileMenu() {
     );
 
     button.textContent =
-        isOpen ? "✕" : "☰";
+        isOpen
+            ? "✕"
+            : "☰";
 }
+
+
+function closeMobileMenu() {
+
+    const menu =
+        document.getElementById(
+            "mobile-menu"
+        );
+
+    const button =
+        document.getElementById(
+            "mobile-menu-button"
+        );
+
+    if (!menu || !button) {
+        return;
+    }
+
+    menu.classList.remove("open");
+
+    button.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    button.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+    );
+
+    button.textContent = "☰";
+}
+
+
+/* =========================
+   Initialize
+   ========================= */
+
+updateLanguage();
+updateTheme();
+
+
+/* =========================
+   Mobile Menu Events
+   ========================= */
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -161,35 +219,8 @@ document.addEventListener(
 
             link.addEventListener(
                 "click",
-                function() {
-
-                    menu.classList.remove(
-                        "open"
-                    );
-
-                    const button =
-                        document.getElementById(
-                            "mobile-menu-button"
-                        );
-
-                    if (button) {
-                        button.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                        button.setAttribute(
-                            "aria-label",
-                            "Open navigation menu"
-                        );
-
-                        button.textContent = "☰";
-                    }
-
-                }
+                closeMobileMenu
             );
-
         });
-
     }
 );
