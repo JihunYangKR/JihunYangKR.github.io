@@ -28,40 +28,7 @@ layout: null
 
 <body>
 
-<header class="navbar">
-
-    <div class="nav-container">
-
-        <a
-            href="{{ '/' | relative_url }}"
-            class="logo"
-        >
-            Jihun Yang
-        </a>
-
-        <nav>
-
-            <a href="{{ '/' | relative_url }}">
-                Home
-            </a>
-
-            <a href="{{ '/archive/' | relative_url }}">
-                Archive
-            </a>
-
-            <button
-                id="theme-button"
-                class="icon-button"
-                onclick="toggleTheme()"
-            >
-                🌙
-            </button>
-
-        </nav>
-
-    </div>
-
-</header>
+    {% include navbar.html %}
 
 
 <main>
