@@ -119,16 +119,16 @@
         </div>
 
 
-        {% assign project_records = site.posts
+        {% assign profile_records = site.posts
             | where_exp: "post", "post.categories contains page.slug"
             | sort: "date"
             | reverse %}
         
-        {% if project_records.size > 0 %}
+        {% if profile_records.size > 0 %}
 
             <div class="archive-list">
         
-                {% for post in project_records %}
+                {% for post in profile_records %}
         
                     <a
                         href="{{ post.url | relative_url }}"
