@@ -104,43 +104,49 @@ layout: null
 
     <div class="project-grid">
 
-        <a
-            href="photography/index.html"
-            class="project-card"
-        >
+        {% assign archive_projects = site.projects
+            | where: "archive", true %}
     
-            <p class="eyebrow">
-                PROJECT
-            </p>
+        {% for project in archive_projects %}
     
-            <h3>
-                Photography
-            </h3>
+            <a
+                href="{{ project.url | relative_url }}"
+                class="project-card"
+            >
     
-            <p>
-                Photography와 관련된 모든 기록과
-                프로젝트 아카이브를 모아둡니다.
-            </p>
+                <p class="eyebrow">
+                    ARCHIVE
+                </p>
     
-            <span>
+                <h3>
+                    {{ project.title }}
+                </h3>
     
-                {% assign count = 0 %}
+                <p>
+                    {{ project.description }}
+                </p>
     
-                {% for post in site.posts %}
+                <span>
     
-                    {% if post.categories contains "photography" %}
+                    {% assign count = 0 %}
     
-                        {% assign count = count | plus: 1 %}
+                    {% for post in site.posts %}
     
-                    {% endif %}
+                        {% if post.categories contains project.slug %}
     
-                {% endfor %}
+                            {% assign count = count | plus: 1 %}
     
-                {{ count }} posts →
+                        {% endif %}
     
-            </span>
+                    {% endfor %}
     
-        </a>    
+                    {{ count }} posts →
+    
+                </span>
+    
+            </a>
+    
+        {% endfor %}
     
         <a
             href="tags/index.html"
@@ -189,9 +195,8 @@ layout: null
     
         </a>
     
-    
     </div>
-
+    
 </div>
 
 </section>
