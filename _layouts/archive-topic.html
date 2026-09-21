@@ -37,17 +37,17 @@
             ARCHIVE
         </p>
 
-        {% assign archive_project = site.projects
+        {% assign archive_profile = site.profiles
             | where: "slug", page.taxonomy
             | first %}
 
         <h1>
-            {{ archive_project.title | default: page.title }}
+            {{ archive_profile.title | default: page.title }}
         </h1>
 
-        {% if archive_project.description %}
+        {% if archive_profile.description %}
             <p class="hero-description">
-                {{ archive_project.description }}
+                {{ archive_profile.description }}
             </p>
         {% elsif page.description %}
             <p class="hero-description">
