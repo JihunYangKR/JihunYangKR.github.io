@@ -4,6 +4,7 @@ title: "Personal Portfolio & Knowledge Archive"
 description: "개인 포트폴리오와 장기 지식 아카이브를 구축하는 프로젝트"
 status: "In Progress"
 date: 2026-09-20
+archive: false
 ---
 
 # Personal Portfolio & Knowledge Archive
