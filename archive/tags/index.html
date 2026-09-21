@@ -18,7 +18,7 @@ layout: null
 
     <link
         rel="stylesheet"
-        href="../../css/style.css"
+        href="{{ '/css/style.css' | relative_url }}"
     >
 
 </head>
@@ -137,7 +137,7 @@ layout: null
 
                     {% if post.tags contains tag %}
 
-                    <a href="{{ post.url }}">
+                    <a href="{{ post.url | relative_url }}">
 
                         <div>
 
@@ -188,7 +188,7 @@ layout: null
 
     <div>
 
-        <a href="../index.html">
+        <a href="{{ '/' | relative_url }}">
             ← Back to Archive
         </a>
 
@@ -197,7 +197,7 @@ layout: null
 </footer>
 
 
-<script src="../../js/main.js"></script>
+<script src="{{ '/js/main.js' | relative_url }}"></script>
 
 </body>
 
