@@ -140,3 +140,56 @@ function toggleMobileMenu() {
     button.textContent =
         isOpen ? "✕" : "☰";
 }
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        const menu =
+            document.getElementById(
+                "mobile-menu"
+            );
+
+        if (!menu) {
+            return;
+        }
+
+        const links =
+            menu.querySelectorAll("a");
+
+        links.forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    menu.classList.remove(
+                        "open"
+                    );
+
+                    const button =
+                        document.getElementById(
+                            "mobile-menu-button"
+                        );
+
+                    if (button) {
+                        button.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                        button.setAttribute(
+                            "aria-label",
+                            "Open navigation menu"
+                        );
+
+                        button.textContent = "☰";
+                    }
+
+                }
+            );
+
+        });
+
+    }
+);
