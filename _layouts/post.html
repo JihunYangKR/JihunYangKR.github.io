@@ -174,26 +174,26 @@
     </article>
     
     
-    {% assign post_project = site.projects
+    {% assign post_profile = site.profiles
         | where: "slug", page.categories.first
         | first %}
     
-    {% if post_project %}
+    {% if post_profile %}
     
-    <div class="post-project-links">
+    <div class="post-profile-links">
     
         <a
-            href="{{ post_project.url | relative_url }}"
+            href="{{ post_profile.url | relative_url }}"
         >
-            Project: {{ post_project.title }} →
+            profile: {{ post_profile.title }} →
         </a>
     
-        {% if post_project.archive %}
+        {% if post_profile.archive %}
     
             <a
-                href="{{ '/archive/' | append: post_project.slug | append: '/' | relative_url }}"
+                href="{{ '/archive/' | append: post_profile.slug | append: '/' | relative_url }}"
             >
-                Archive: {{ post_project.title }} →
+                Archive: {{ post_profile.title }} →
             </a>
     
         {% endif %}
