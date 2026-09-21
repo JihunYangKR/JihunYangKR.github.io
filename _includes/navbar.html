@@ -10,16 +10,28 @@
 
         <div class="nav-links">
 
-            <a href="{{ '/' | relative_url }}#about">
-                About
+            <a
+                href="{{ '/' | relative_url }}#about"
+                data-ko="소개"
+                data-en="About"
+            >
+                소개
             </a>
 
-            <a href="{{ '/' | relative_url }}#projects">
-                Projects
+            <a
+                href="{{ '/' | relative_url }}#projects"
+                data-ko="프로젝트"
+                data-en="Projects"
+            >
+                프로젝트
             </a>
 
-            <a href="{{ '/archive/' | relative_url }}">
-                Archive
+            <a
+                href="{{ '/archive/' | relative_url }}"
+                data-ko="아카이브"
+                data-en="Archive"
+            >
+                아카이브
             </a>
 
         </div>
@@ -31,8 +43,8 @@
                 id="language-button"
                 class="icon-button"
                 type="button"
-                aria-label="Change language"
                 onclick="toggleLanguage()"
+                aria-label="Change language"
             >
                 EN
             </button>
@@ -42,8 +54,8 @@
                 id="theme-button"
                 class="icon-button"
                 type="button"
-                aria-label="Toggle dark mode"
                 onclick="toggleTheme()"
+                aria-label="Toggle dark mode"
             >
                 🌙
             </button>
