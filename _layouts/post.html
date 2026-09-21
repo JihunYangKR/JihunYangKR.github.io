@@ -199,10 +199,39 @@
     <article class="post-content">
 
         {{ content }}
-
+    
     </article>
-
-
+    
+    
+    {% assign post_project = site.projects
+        | where: "slug", page.categories.first
+        | first %}
+    
+    {% if post_project %}
+    
+    <div class="post-project-links">
+    
+        <a
+            href="{{ post_project.url | relative_url }}"
+        >
+            Project: {{ post_project.title }} →
+        </a>
+    
+        {% if post_project.archive %}
+    
+            <a
+                href="{{ '/archive/' | append: post_project.slug | append: '/' | relative_url }}"
+            >
+                Archive: {{ post_project.title }} →
+            </a>
+    
+        {% endif %}
+    
+    </div>
+    
+    {% endif %}
+    
+    
     {% if page.tags %}
 
     <div class="post-tags">
