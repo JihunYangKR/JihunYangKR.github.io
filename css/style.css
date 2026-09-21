@@ -547,9 +547,9 @@ footer {
 
     .mobile-menu a {
         display: block;
-        padding: 14px 0;
+        padding: 18px 10px;
         border-bottom: 1px solid var(--border);
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .mobile-menu a:last-child {
