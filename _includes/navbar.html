@@ -1,0 +1,54 @@
+<nav class="navbar">
+    <div class="nav-container">
+
+        <a
+            href="{{ '/' | relative_url }}"
+            class="logo"
+        >
+            JIHUN YANG
+        </a>
+
+        <div class="nav-links">
+
+            <a href="{{ '/' | relative_url }}#about">
+                About
+            </a>
+
+            <a href="{{ '/' | relative_url }}#projects">
+                Projects
+            </a>
+
+            <a href="{{ '/archive/' | relative_url }}">
+                Archive
+            </a>
+
+        </div>
+
+        <div class="nav-buttons">
+
+            {% if include.show_language %}
+            <button
+                id="language-button"
+                class="icon-button"
+                type="button"
+                aria-label="Change language"
+                onclick="toggleLanguage()"
+            >
+                EN
+            </button>
+            {% endif %}
+
+            <button
+                id="theme-button"
+                class="icon-button"
+                type="button"
+                aria-label="Toggle dark mode"
+                onclick="toggleTheme()"
+            >
+                🌙
+            </button>
+
+        </div>
+
+    </div>
+</nav>
