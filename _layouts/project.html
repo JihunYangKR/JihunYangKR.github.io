@@ -11,7 +11,7 @@
     >
 
     <title>
-        {{ page.title }} — {{ site.title }}
+        {{ page.title | escape }} — {{ site.title | escape }}
     </title>
 
     <meta
@@ -137,20 +137,34 @@
     <div class="container">
 
         <div class="section-header">
-
-            <p class="eyebrow">
-                ARCHIVE
-            </p>
-            
-            <h2>
-                {{ page.title }} Records
-            </h2>
-
+        
+            <div>
+        
+                <p class="eyebrow">
+                    ARCHIVE
+                </p>
+        
+                <h2>
+                    {{ page.title }} Records
+                </h2>
+        
+            </div>
+        
+            {% if page.archive %}
+                <a
+                    href="{{ '/archive/' | append: page.slug | append: '/' | relative_url }}"
+                >
+                    View Archive →
+                </a>
+            {% endif %}
+        
         </div>
 
 
         {% assign project_records = site.posts
-            | where_exp: "post", "post.categories contains page.slug" %}
+            | where_exp: "post", "post.categories contains page.slug"
+            | sort: "date"
+            | reverse %}
         
         {% if project_records.size > 0 %}
 
