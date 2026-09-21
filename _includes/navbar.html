@@ -1,4 +1,5 @@
 <nav class="navbar">
+
     <div class="nav-container">
 
         <a
@@ -60,7 +61,51 @@
                 🌙
             </button>
 
+            <button
+                id="mobile-menu-button"
+                class="icon-button mobile-menu-button"
+                type="button"
+                onclick="toggleMobileMenu()"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
+                ☰
+            </button>
+
         </div>
 
     </div>
+
+    <div
+        id="mobile-menu"
+        class="mobile-menu"
+    >
+
+        <a
+            href="{{ '/' | relative_url }}#about"
+            data-ko="소개"
+            data-en="About"
+        >
+            소개
+        </a>
+
+        <a
+            href="{{ '/' | relative_url }}#projects"
+            data-ko="프로젝트"
+            data-en="Projects"
+        >
+            프로젝트
+        </a>
+
+        <a
+            href="{{ '/archive/' | relative_url }}"
+            data-ko="아카이브"
+            data-en="Archive"
+        >
+            아카이브
+        </a>
+
+    </div>
+
 </nav>
