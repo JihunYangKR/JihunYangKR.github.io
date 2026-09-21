@@ -162,15 +162,15 @@
 
             Published:
             {{ page.date | date: "%Y-%m-%d" }}
-    
-            {% if page.updated %}
-
-                · Updated:
-                {{ page.updated | date: "%Y-%m-%d" }}
-
-            {% endif %}
 
         </p>
+
+        {% if page.updated %}
+            <p class="hero-description">
+                Updated:
+                {{ page.updated | date: "%Y-%m-%d" }}
+            </p>
+        {% endif %}
 
     </div>
 
