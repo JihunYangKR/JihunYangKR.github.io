@@ -25,47 +25,7 @@
 
 <body>
 
-<header class="navbar">
-    <div class="nav-container">
-
-        <a
-            href="{{ '/' | relative_url }}"
-            class="logo">
-            Jihun Yang
-        </a>
-
-        <nav aria-label="Primary">
-
-            <a href="{{ '/' | relative_url }}">
-                Home
-            </a>
-
-            <a href="{{ '/#about' | relative_url }}">
-                About
-            </a>
-
-            <a href="{{ '/#projects' | relative_url }}">
-                Projects
-            </a>
-
-            <a href="{{ '/archive/' | relative_url }}">
-                Archive
-            </a>
-
-            <button
-                id="theme-button"
-                class="icon-button"
-                type="button"
-                onclick="toggleTheme()"
-                aria-label="Toggle dark mode"
-                aria-pressed="false">
-                🌙
-            </button>
-
-        </nav>
-
-    </div>
-</header>
+    {% include navbar.html %}
 
 <main>
 
