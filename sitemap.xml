@@ -29,34 +29,7 @@ layout: null
     <url>
 
         <loc>
-            {{ site.url }}{{ site.baseurl }}/archive/notes/
-        </loc>
-
-    </url>
-
-
-    <url>
-
-        <loc>
-            {{ site.url }}{{ site.baseurl }}/archive/papers/
-        </loc>
-
-    </url>
-
-
-    <url>
-
-        <loc>
-            {{ site.url }}{{ site.baseurl }}/archive/projects/
-        </loc>
-
-    </url>
-
-
-    <url>
-
-        <loc>
-            {{ site.url }}{{ site.baseurl }}/archive/resources/
+            {{ site.url }}{{ site.baseurl }}/archive/photography/
         </loc>
 
     </url>
@@ -69,6 +42,28 @@ layout: null
         </loc>
 
     </url>
+
+
+    <url>
+
+        <loc>
+            {{ site.url }}{{ site.baseurl }}/archive/years/
+        </loc>
+
+    </url>
+
+
+    {% for project in site.projects %}
+
+    <url>
+
+        <loc>
+            {{ site.url }}{{ site.baseurl }}{{ project.url }}
+        </loc>
+
+    </url>
+
+    {% endfor %}
 
 
     {% for post in site.posts %}
