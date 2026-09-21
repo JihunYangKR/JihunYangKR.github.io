@@ -11,7 +11,6 @@
     --accent: #111111;
 
     --max-width: 1100px;
-
     --transition: 0.25s ease;
 }
 
@@ -50,10 +49,9 @@ body {
 
     background: var(--background);
     color: var(--text);
-   
-   line-height: 1.7;
-   
-   overflow-x: hidden;
+
+    line-height: 1.7;
+    overflow-x: hidden;
 
     transition:
         background var(--transition),
@@ -70,6 +68,7 @@ button:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 4px;
 }
+
 
 /* =========================
    Navigation
@@ -150,6 +149,14 @@ button:focus-visible {
 
 .icon-button:hover {
     background: var(--surface);
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu-button {
+    display: none;
 }
 
 
@@ -430,132 +437,6 @@ footer {
 
     border-top:
         1px solid var(--border);
-}
-
-
-/* =========================
-   Mobile
-   ========================= */
-
-@media (max-width: 700px) {
-
-    .navbar {
-        padding:
-            18px 20px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    main {
-        padding:
-            0 20px 70px;
-    }
-
-    .hero {
-        min-height: 70vh;
-
-        padding:
-            60px 0;
-    }
-
-    .hero h1 {
-        font-size:
-            clamp(46px, 15vw, 72px);
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .about-content {
-        grid-template-columns:
-            1fr;
-
-        gap: 30px;
-    }
-
-    .large-text {
-        font-size: 23px;
-    }
-
-    .profile-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-    .profile-card {
-        min-height: 250px;
-    }
-
-   .hero-buttons {
-       flex-wrap: wrap;
-   }
-
-    .profile-card h3 {
-        margin-top: 45px;
-    }
-
-    .archive-item {
-        grid-template-columns:
-            75px minmax(0, 1fr) 20px;
-
-        gap: 10px;
-    }
-
-    .archive-item h3 {
-        font-size: 15px;
-    }
-
-    footer {
-        padding:
-            25px 20px 40px;
-    }
-}
-
-/* =========================
-   Mobile Navigation
-   ========================= */
-
-.mobile-menu {
-    display: none;
-}
-
-.mobile-menu-button {
-    display: none;
-}
-
-@media (max-width: 700px) {
-
-    .mobile-menu-button {
-        display: inline-flex;
-    }
-
-    .mobile-menu {
-        display: none;
-        flex-direction: column;
-        gap: 4px;
-        padding: 10px 20px 20px;
-        border-top: 1px solid var(--border);
-        background: var(--background);
-    }
-
-    .mobile-menu.open {
-        display: flex;
-    }
-
-    .mobile-menu a {
-        display: block;
-        padding: 18px 10px;
-        border-bottom: 1px solid var(--border);
-        font-size: 17px;
-    }
-
-    .mobile-menu a:last-child {
-        border-bottom: none;
-    }
-
 }
 
 
@@ -902,7 +783,7 @@ footer {
 
 
 /* =========================
-   Search Result Meta
+   Search
    ========================= */
 
 .search-meta {
@@ -927,11 +808,6 @@ footer {
         4px 8px;
 }
 
-
-/* =========================
-   Search Count
-   ========================= */
-
 .search-count {
     margin-bottom:
         20px;
@@ -939,11 +815,6 @@ footer {
     opacity:
         0.65;
 }
-
-
-/* =========================
-   Archive Search
-   ========================= */
 
 .archive-search {
     width:
@@ -970,9 +841,6 @@ footer {
     font-size:
         16px;
 
-    box-sizing:
-        border-box;
-
     outline:
         none;
 }
@@ -995,10 +863,163 @@ footer {
 
 
 /* =========================
-   Post Mobile
+   Mobile
    ========================= */
 
 @media (max-width: 700px) {
+
+    .navbar {
+        padding:
+            18px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-buttons {
+        margin-left: auto;
+        gap: 8px;
+    }
+
+    .icon-button {
+        width: 42px;
+        height: 42px;
+
+        padding: 0;
+
+        font-size: 16px;
+    }
+
+    .logo {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .mobile-menu-button {
+        display: inline-flex;
+
+        width: 42px;
+        min-width: 42px;
+        max-width: 42px;
+
+        height: 42px;
+        min-height: 42px;
+        max-height: 42px;
+
+        padding: 0;
+        margin: 0;
+
+        align-items: center;
+        justify-content: center;
+
+        font-size: 18px;
+        line-height: 1;
+
+        flex-shrink: 0;
+    }
+
+    .mobile-menu {
+        display: none;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+        padding:
+            10px 20px 20px;
+
+        border-top:
+            1px solid var(--border);
+
+        background:
+            var(--background);
+    }
+
+    .mobile-menu.open {
+        display: flex;
+    }
+
+    .mobile-menu a {
+        display: block;
+
+        padding:
+            18px 10px;
+
+        border-bottom:
+            1px solid var(--border);
+
+        font-size: 17px;
+    }
+
+    .mobile-menu a:last-child {
+        border-bottom: none;
+    }
+
+    main {
+        padding:
+            0 20px 70px;
+    }
+
+    .hero {
+        min-height: 70vh;
+
+        padding:
+            60px 0;
+    }
+
+    .hero h1 {
+        font-size:
+            clamp(46px, 15vw, 72px);
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .about-content {
+        grid-template-columns:
+            1fr;
+
+        gap: 30px;
+    }
+
+    .large-text {
+        font-size: 23px;
+    }
+
+    .profile-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .profile-card {
+        min-height: 250px;
+    }
+
+    .profile-card h3 {
+        margin-top: 45px;
+    }
+
+    .archive-item {
+        grid-template-columns:
+            75px minmax(0, 1fr) 20px;
+
+        gap: 10px;
+    }
+
+    .archive-item h3 {
+        font-size: 15px;
+    }
+
+    footer {
+        padding:
+            25px 20px 40px;
+    }
 
     .post-content {
         font-size:
@@ -1040,7 +1061,13 @@ footer {
     }
 }
 
+
+/* =========================
+   Reduced Motion
+   ========================= */
+
 @media (prefers-reduced-motion: reduce) {
+
     html {
         scroll-behavior: auto;
     }
@@ -1051,56 +1078,4 @@ footer {
         transition: none !important;
         animation: none !important;
     }
-}
-
-@media (max-width: 700px) {
-
-    .nav-buttons {
-        margin-left: auto;
-        gap: 8px;
-    }
-
-    .icon-button {
-        width: 42px;
-        height: 42px;
-        padding: 0;
-        font-size: 16px;
-    }
-
-    .logo {
-        font-size: 15px;
-        white-space: nowrap;
-    }
-
-}
-
-/* =========================
-   Mobile Menu Button Fix
-   ========================= */
-
-@media (max-width: 700px) {
-
-    #mobile-menu-button {
-        display: inline-flex;
-
-        width: 42px;
-        min-width: 42px;
-        max-width: 42px;
-
-        height: 42px;
-        min-height: 42px;
-        max-height: 42px;
-
-        padding: 0;
-        margin: 0;
-
-        align-items: center;
-        justify-content: center;
-
-        font-size: 18px;
-        line-height: 1;
-
-        flex-shrink: 0;
-    }
-
 }
