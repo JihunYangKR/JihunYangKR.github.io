@@ -164,25 +164,31 @@ layout: null
                 {% for project in site.projects %}
             
                     <article class="project-card">
-            
+
                         <div class="project-number">
                             {{ forloop.index | prepend: "0" }}
                         </div>
-            
+                    
                         <h3>
                             {{ project.title }}
                         </h3>
-            
+                    
                         <p>
                             {{ project.description }}
                         </p>
-            
+                    
+                        {% if project.status %}
+                            <span class="tag">
+                                {{ project.status }}
+                            </span>
+                        {% endif %}
+                    
                         <a
                             href="{{ project.url | relative_url }}"
                             class="project-link">
                             View project →
                         </a>
-            
+                    
                     </article>
             
                 {% endfor %}
