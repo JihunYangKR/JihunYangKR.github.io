@@ -36,15 +36,15 @@ layout: null
 
             <p class="hero-description"
                data-ko="프로젝트, 공부 기록과 개인적인 작업을 정리하는 공간입니다."
-               data-en="A personal space for my projects, learning, and work.">
+               data-en="A personal space for my profiles, learning, and work.">
                 프로젝트, 공부 기록과 개인적인 작업을 정리하는 공간입니다.
             </p>
 
             <div class="hero-buttons">
 
-                <a href="#projects" class="button primary"
+                <a href="#profiles" class="button primary"
                    data-ko="프로젝트 보기"
-                   data-en="View Projects">
+                   data-en="View Profiles">
                     프로젝트 보기
                 </a>
 
@@ -106,50 +106,50 @@ layout: null
         </section>
 
 
-        <!-- Projects -->
-        <section id="projects" class="section">
+        <!-- Profiles -->
+        <section id="profiles" class="section">
 
             <div class="section-heading">
 
                 <span>02</span>
 
                 <h2
-                    data-ko="Projects"
-                    data-en="Projects">
-                    Projects
+                    data-ko="Profiles"
+                    data-en="Profiles">
+                    Profiles
                 </h2>
 
             </div>
 
 
-            <div class="project-grid">
+            <div class="profile-grid">
 
-                {% for project in site.projects %}
+                {% for profile in site.profiles %}
             
-                    <article class="project-card">
+                    <article class="profile-card">
 
-                        <div class="project-number">
+                        <div class="profile-number">
                             {{ forloop.index | prepend: "0" }}
                         </div>
                     
                         <h3>
-                            {{ project.title }}
+                            {{ profile.title }}
                         </h3>
                     
                         <p>
-                            {{ project.description }}
+                            {{ profile.description }}
                         </p>
                     
-                        {% if project.status %}
+                        {% if profile.status %}
                             <span class="tag">
-                                {{ project.status }}
+                                {{ profile.status }}
                             </span>
                         {% endif %}
                     
                         <a
-                            href="{{ project.url | relative_url }}"
-                            class="project-link">
-                            View project →
+                            href="{{ profile.url | relative_url }}"
+                            class="profile-link">
+                            View profile →
                         </a>
                     
                     </article>
