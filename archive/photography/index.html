@@ -1,0 +1,70 @@
+---
+layout: default
+title: "Photography"
+---
+
+<section class="hero">
+
+    <div class="container">
+
+        <p class="eyebrow">
+            ARCHIVE
+        </p>
+
+        <h1>
+            Photography
+        </h1>
+
+        <p class="hero-description">
+            Photography와 관련된 모든 기록을 모아둔 아카이브입니다.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container">
+
+        <div class="archive-list">
+
+            {% assign photography_posts = site.posts
+                | where_exp: "post", "post.categories contains 'photography'" %}
+
+            {% for post in photography_posts %}
+
+                <a
+                    href="{{ post.url | relative_url }}"
+                    class="archive-item">
+
+                    <div>
+
+                        <span class="archive-date">
+                            {{ post.date | date: "%Y-%m-%d" }}
+                        </span>
+
+                        <h3>
+                            {{ post.title }}
+                        </h3>
+
+                        <p>
+                            {{ post.excerpt
+                                | strip_html
+                                | truncate: 160 }}
+                        </p>
+
+                    </div>
+
+                    <span>→</span>
+
+                </a>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
