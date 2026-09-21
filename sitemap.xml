@@ -8,6 +8,8 @@ layout: null
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 >
 
+    <!-- Home -->
+
     <url>
 
         <loc>
@@ -16,6 +18,8 @@ layout: null
 
     </url>
 
+
+    <!-- Archive -->
 
     <url>
 
@@ -26,14 +30,25 @@ layout: null
     </url>
 
 
+    <!-- Archive Topic Pages -->
+
+    {% assign archive_projects = site.projects
+        | where: "archive", true %}
+
+    {% for project in archive_projects %}
+
     <url>
 
         <loc>
-            {{ site.url }}{{ site.baseurl }}/archive/photography/
+            {{ site.url }}{{ site.baseurl }}/archive/{{ project.slug }}/
         </loc>
 
     </url>
 
+    {% endfor %}
+
+
+    <!-- Tags -->
 
     <url>
 
@@ -44,6 +59,8 @@ layout: null
     </url>
 
 
+    <!-- Years -->
+
     <url>
 
         <loc>
@@ -52,6 +69,8 @@ layout: null
 
     </url>
 
+
+    <!-- Projects -->
 
     {% for project in site.projects %}
 
@@ -65,6 +84,8 @@ layout: null
 
     {% endfor %}
 
+
+    <!-- Posts -->
 
     {% for post in site.posts %}
 
