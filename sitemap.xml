@@ -32,15 +32,15 @@ layout: null
 
     <!-- Archive Topic Pages -->
 
-    {% assign archive_projects = site.projects
+    {% assign archive_profiles = site.profiles
         | where: "archive", true %}
 
-    {% for project in archive_projects %}
+    {% for profile in archive_profiles %}
 
     <url>
 
         <loc>
-            {{ site.url }}{{ site.baseurl }}/archive/{{ project.slug }}/
+            {{ site.url }}{{ site.baseurl }}/archive/{{ profile.slug }}/
         </loc>
 
     </url>
@@ -70,14 +70,14 @@ layout: null
     </url>
 
 
-    <!-- Projects -->
+    <!-- Profiles -->
 
-    {% for project in site.projects %}
+    {% for profile in site.profiles %}
 
     <url>
 
         <loc>
-            {{ site.url }}{{ site.baseurl }}{{ project.url }}
+            {{ site.url }}{{ site.baseurl }}{{ profile.url }}
         </loc>
 
     </url>
