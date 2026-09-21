@@ -237,7 +237,7 @@
 
             {% if page.previous %}
 
-            <a href="{{ page.previous.url }}">
+            <a href="{{ page.previous.url | relative_url }}">
 
                 ← Previous
 
@@ -258,7 +258,7 @@
 
             {% if page.next %}
 
-            <a href="{{ page.next.url }}">
+            <a href="{{ page.next.url | relative_url }}">
 
                 Next →
 
@@ -293,8 +293,8 @@
 
     <div>
 
-        <a href="{{ '/archive/notes/' | relative_url }}">
-            ← Back to Notes
+        <a href="{{ '/archive/' | relative_url }}">
+            ← Back to Archive
         </a>
 
     </div>
