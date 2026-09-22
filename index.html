@@ -139,17 +139,21 @@ layout: null
                             {{ profile.description }}
                         </p>
                     
-                        {% if profile.status %}
-                            <span class="tag">
-                                {{ profile.status }}
-                            </span>
-                        {% endif %}
-                    
-                        <a
-                            href="{{ profile.url | relative_url }}"
-                            class="profile-link">
-                            View profile →
-                        </a>
+                        <div class="profile-card-footer">
+
+                            {% if profile.status %}
+                                <span class="tag">
+                                    {{ profile.status }}
+                                </span>
+                            {% endif %}
+                        
+                            <a
+                                href="{{ profile.url | relative_url }}"
+                                class="profile-link">
+                                View profile →
+                            </a>
+                        
+                        </div>
                     
                     </article>
             
