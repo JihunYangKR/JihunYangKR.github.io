@@ -3,7 +3,8 @@ layout: profile
 title: "Cube"
 description: "A profile for speedcubing contents & archives. Known as 2021YANG27 in WCA."
 status: "Active"
-date: 2026-09-22
+date: 2021-12-18
+updated: 2026-09-22
 archive: true
 ---
 
