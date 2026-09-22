@@ -297,11 +297,10 @@ main {
 
 .about-content {
     display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
+    align-items: center;
+    margin-top: 80px;
 }
 
 .large-text {
@@ -314,8 +313,28 @@ main {
 }
 
 .about-image img {
-    width: 300px;
+    display: block;
+    width: 100%;
+    max-width: 520px;
     height: auto;
+}
+
+.about-text {
+    max-width: 620px;
+}
+
+.about-text p {
+    margin: 0 0 32px;
+    line-height: 1.7;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-text .large-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
 }
 
 /* =========================
