@@ -2,6 +2,7 @@
 layout: post
 title: Opened JihunYangKR.github.io 
 date: 2026-09-22
+updated: 2026-09-22
 categories:
   - jihunyang
 tags:
