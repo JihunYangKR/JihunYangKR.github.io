@@ -313,6 +313,10 @@ main {
     letter-spacing: -0.03em;
 }
 
+.about-image img {
+    width: 300px;
+    height: auto;
+}
 
 /* =========================
    Profiles
