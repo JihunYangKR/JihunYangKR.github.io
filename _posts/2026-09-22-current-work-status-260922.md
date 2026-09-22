@@ -9,7 +9,7 @@ tags:
   - jihunyangkr.github.io
 ---
 
-# OPENED JihunYangKR.github.io
+# Opened JihunYangKR.github.io
 
 Opened my personal website to backup my posts, archives, etc.
 
