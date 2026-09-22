@@ -226,21 +226,21 @@ layout: null
 
         <a href="{{ post.url | relative_url }}" class="archive-item">
 
-            <div>
-
                 <span class="archive-date">
                     {{ post.date | date: "%Y-%m-%d" }}
                 </span>
 
-                <h3>
-                    {{ post.title }}
-                </h3>
-
-                <p>
-                    {{ post.excerpt | strip_html | truncate: 120 }}
-                </p>
-
-            </div>
+                <div>
+                    
+                    <h3>
+                        {{ post.title }}
+                    </h3>
+    
+                    <p>
+                        {{ post.excerpt | strip_html | truncate: 120 }}
+                    </p>
+    
+                </div>
 
             <span>
                 →
@@ -372,63 +372,63 @@ layout: null
         results.forEach(function(post) {
 
             html += `
-
+            
                 <a
                     href="${post.url}"
                     class="archive-item"
                 >
-
+            
+                    <span class="archive-date">
+                        ${post.date}
+                    </span>
+            
                     <div>
-
-                        <span class="archive-date">
-                            ${post.date}
-                        </span>
-
+            
                         <h3>
                             ${post.title}
                         </h3>
-
+            
                         <div class="search-meta">
-
+            
                             ${(post.categories || []).map(
                                 function(category) {
-
+            
                                     return `
                                         <span class="tag">
                                             ${category}
                                         </span>
                                     `;
-
+            
                                 }
                             ).join("")}
-
-
+            
+            
                             ${(post.tags || []).map(
                                 function(tag) {
-
+            
                                     return `
                                         <span class="tag">
                                             #${tag}
                                         </span>
                                     `;
-
+            
                                 }
                             ).join("")}
-
+            
                         </div>
-
+            
                         <p>
                             ${post.excerpt}
                         </p>
-
+            
                     </div>
-
+            
                     <span>
                         →
                     </span>
-
+            
                 </a>
-
+            
             `;
 
         });
