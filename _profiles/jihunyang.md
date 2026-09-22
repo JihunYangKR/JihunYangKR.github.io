@@ -5,7 +5,7 @@ description: "A profile for building and managing a personal archive."
 status: "In Progress"
 date: 2026-09-20
 updated: 2026-09-22
-archive: false
+archive: true
 ---
 
 # Personal Archive
