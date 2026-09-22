@@ -438,9 +438,15 @@ main {
         1px solid var(--border);
 }
 
-.archive-item span {
+/* 날짜 */
+.archive-item .archive-date {
     color: var(--muted);
     font-size: 14px;
+}
+
+/* 제목 + 설명 영역 */
+.archive-item > div {
+    min-width: 0;
 }
 
 .archive-item h3 {
@@ -452,6 +458,23 @@ main {
     overflow-wrap: anywhere;
 }
 
+.archive-item p {
+    margin:
+        6px 0 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+/* 오른쪽 화살표 */
+.archive-item > span:last-child {
+    color: var(--muted);
+    font-size: 14px;
+}
 
 /* =========================
    Footer
