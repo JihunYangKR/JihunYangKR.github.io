@@ -1,0 +1,57 @@
+---
+layout: profile
+title: "Cube"
+description: "A profile for speedcubing contents & archives. Known as 2021YANG27 in WCA."
+status: "Active"
+date: 2026-09-22
+archive: true
+---
+
+# Cube
+
+A profile for speedcubing contents & archives.
+Known as 2021YANG27 in WCA.
+
+## Highlights
+
+Staff member for Korea Cube Culture United (WCA Regional Organization)
+
+### Medal Collection
+
+| 🥇 Gold | 🥈 Silver | 🥉 Bronze |
+|:---:|:---:|:---:|
+| 2 | 5 | 2 |
+
+### Fewest Moves
+- **Korean NR3**
+- Rubik's WCA World Championship 2025 - Qualified for Finals
+- Rubik's WCA Asian Championship 2024 - Qualified for Finals (8th Place)
+- Rubik's WCA World Championship 2023 - Qualified for Finals
+- FMC Korea 2023 - 3rd Place
+- Please Be Quiet Daegu 2023 - 2nd Place
+- **Korean Championship 2022 - Champion**
+
+### Square-1
+- **Korean NR8**
+- Korea Open 2026 - 3rd Place
+- **Uhseo Osong 2026 - Winner**
+- Okcheon Autumn Breeze 2025 - 2nd Place
+- Rubik's WCA World Championship 2025 - Qualified
+- Caviteminx 2025 - 2nd Place
+- **Rubik's WCA Asian Championship 2024 - Qualified for Finals (10th Place)**
+- Daegu Autumn 2024 - 2nd Place
+- **Korean Championship 2023 - Runner-Up**
+
+
+## Links
+
+- [World Cube Association](https://www.worldcubeassociation.org/persons/2021YANG27)
+- [Contact](mailto:yangcubist@gmail.com)
+- [Youtube (한국어)](https://www.youtube.com/@%ED%81%90%EB%B8%8C%EB%A9%98%ED%86%A0)
+- [Youtube (Archive)](https://www.youtube.com/@JihunYang)
+- [X (formerly Twitter)](https://x.com/2021yang27)
+- [Instagram (currently private)](https://www.instagram.com/2021yang27/)
+
+## Archive
+
+Browse all archives here.
