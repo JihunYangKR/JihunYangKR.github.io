@@ -1,19 +1,22 @@
 ---
 layout: profile
-title: "Photography"
-description: "Photography와 관련된 기록과 작업을 모아두는 Profile"
+title: "Cube"
+description: "A profile for speedcubing contents & archives. Known as 2021YANG27 in WCA"
 status: "Active"
-date: 2026-09-21
+date: 2026-09-22
 archive: true
 ---
 
-# Photography
+# Cube
 
-Photography와 관련된 기록과 작업을 모아두는 Profile입니다.
+A profile for speedcubing contents & archives.
+Known as 2021YANG27 in WCA.
 
-사진 촬영, 카메라, 이미지와 관련된 경험과 지식을 기록하고,
-촬영 과정에서 얻은 결과와 생각을 정리합니다.
+## Links
 
-## 관련 Archive
+- [World Cube Association](https://www.worldcubeassociation.org/persons/2021YANG27)
+- [Youtube (한국어)](https://www.youtube.com/@%ED%81%90%EB%B8%8C%EB%A9%98%ED%86%A0)
 
-Photography와 관련된 기록은 Archive에서 확인할 수 있습니다.
+## Archive
+
+Browse all archives here.
