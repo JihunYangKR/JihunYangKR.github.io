@@ -1,6 +1,6 @@
 ---
 layout: post
-title: **Notice** OPENED JihunYangKR.github.io 
+title: Opened JihunYangKR.github.io 
 date: 2026-09-22
 categories:
   - jihunyang
