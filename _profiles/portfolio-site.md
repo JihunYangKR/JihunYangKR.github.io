@@ -1,33 +1,31 @@
 ---
 layout: profile
-title: "Personal Portfolio & Knowledge Archive"
-description: "개인 포트폴리오와 장기 지식 아카이브를 구축하고 관리하는 Profile"
+title: "Personal Archive"
+description: "A profile for building and managing a personal archive."
 status: "In Progress"
 date: 2026-09-20
+updated: 2026-09-22
 archive: false
 ---
 
-# Personal Portfolio & Knowledge Archive
+# Personal Archive
 
-개인 포트폴리오와 장기 지식 아카이브를 구축하고 관리하는 Profile입니다.
+A profile for building and managing a personal archive.
 
-GitHub Pages와 Jekyll을 기반으로
-개인 작업과 지식을 장기적으로 기록하고 관리할 수 있는
-웹사이트를 만들어가고 있습니다.
+A website for documenting and managing my personal work over time.
 
-## 주요 기능
+Only English. (for now)
 
-- 반응형 포트폴리오
-- Markdown 기반 Archive
+## Main Functions
+
+- Archive based on Markdown
 - Categories
 - Tags
 - Search
 - Year Archive
 - Dark Mode
-- MathJax
-- SEO
 
-## 사용 기술
+## Powered by
 
 - HTML
 - CSS
@@ -35,6 +33,6 @@ GitHub Pages와 Jekyll을 기반으로
 - Jekyll
 - GitHub Pages
 
-## 현재 상태
+## Status
 
-지속적으로 기능을 개선하고 실제 콘텐츠를 추가하고 있습니다.
+Adding contents constantly.
