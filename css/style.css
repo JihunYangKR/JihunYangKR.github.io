@@ -356,10 +356,17 @@ main {
 
     border:
         1px solid transparent;
+   
+   display: flex;
+   flex-direction: column;
 
     transition:
         transform var(--transition),
         border var(--transition);
+}
+
+.profile-card > span:last-child {
+    margin-top: auto;
 }
 
 .profile-card:hover {
