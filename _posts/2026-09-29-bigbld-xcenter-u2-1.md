@@ -25,6 +25,14 @@ B가 레터페어 뒤일때: U insert U undo U2
 예시:<br>
 BF: U2 y' u r' u' r U' r' u r u' y U' 
 
+### D
+
+D가 레터페어 앞일때: U2 insert U undo U<br>
+D가 레터페어 뒤일때: U' insert U' undo U2
+<br><br>
+예시:<br>
+DF: U2 y' u r' u' r U r' u r u' y U 
+
 ## D면
 
 레터페어 V: r2 D' r2 D r2 U2 r2 D' r2 D r2<br><br>
