@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "PBQ Singapore Oct 2026 Goals"
+title: "PBQ Singapore Oct 2026 목표"
 date: 2026-09-23
-updated: 2026-09-23
+updated: 2026-09-29
 categories:
   - 2021yang27
 tags:
@@ -11,33 +11,36 @@ tags:
   - abroad
 ---
 
-# PBQ Singapore Oct 2026 Goals
+# PBQ Singapore Oct 2026 목표
 
-## Why I am going to Singapore
+## 싱가포르 가는 이유
 
-I had planned to travel abroad once this year for AS2026. Unfortunately, since AS2026 has been canceled, I lost my reason to travel anywhere abroad.  
+올해 Asian Championship 2026 대회를 위해 한 번 해외 대회를 나갈 생각이었습니다. 다만 아쉽게도 Asian Championship 2026이 취소가 되는 바람에 올해는 해외를 못 가게 생겼습니다.
 
-To be honest, given how busy I've been fulfilling my military service obligations this year, staying in Korea and not traveling abroad would've been a perfectly reasonable option. But anyway, I mean, I didn’t really want to spend the entire year stuck in Korea.  
+솔직히 올해는 병역문제도 있고 여러 개인 사정으로 해외에 가지 않는 게 더 타당한 선택일지도 모릅니다. 그런데 정말 한국에만 한 해를 박혀있자니 너무 속상하더라고요.
 
-As it happened, Chong Wen posted a competition being held in Singapore that actually worked out quite well for me, so I decided to head over there. Singapore is a relatively small country, so a day or two is enough to see most of what I want to see. That also means I don’t have to use as much annual leave as I originally expected.  
+싱가포르에 Chong Wen 선수가 좋은 대회를 소개해주더라고요. 마음에 들더라고요.
 
-## Goals
+일단 싱가포르가 작은 도시 규모 국가여서 여행하기도 편한 것도 있고 제가 주력으로 하는 최소회전 종목이 2라운드로 열린다니 재밌을 것 같았습니다.
+
+한국에서는 Korean Championship 2026 전까지 FMC 대회가 열릴 가능성이 너무 희박해서 어쩔 수가 없습니다.
+
+## 목표
   
-### Fewest Moves
+### 최소회전
   
-My whole time main event. Getting Awards is my main goal actually. But I don't know if it's possible, since there are 3 competitive competitors from singapore.<br>
-Also we have dual rounds for fewest moves, so if I get PRs it'll be perfect.
+제 주력 종목인만큼 최선의 노력을 다하려고 합니다. 3명의 쟁쟁한 싱가포르 선수들 사이에서 입상하는 것이 목표긴 하지만 잘 될지는 의문이네요. 확정적으로 평균을 2번 낼 수 있고 싱글에는 6번의 기회가 있기 때문에 PR도 깼으면 좋겠습니다. 내년 World Championship은 퀄리파잉이 또 어떨지 모르기 때문에 최대한 잘해둬야 안심일 것 같습니다.
   
 ### 3BLD
   
-Second important event for me. Getting average will be perfect.
+두번째로 중요하게 생각 중인 종목입니다. 이제는 정말 평균을 갖고 싶네요.
   
 ### 4BLD & 5BLD
 
-Actually I'm aiming for full profile, so getting mean would be important
+나름 중요하긴 한 종목들입니다. WCA 풀프로필을 목표로 하기 때문에 평균을 내고 싶습니다. 사실 5BLD는 싱글만 내도 성공적일 것 같습니다. 싱글은 각각 6번 평균 각각 2번 기회가 있으니 열심히 암기해보겠습니다.
   
 ## Travel
 
-- Marina Bay Sans
-- Gardens by the Bay
-- Arcades (maybe virtualand nex?) - Recap will be posted in my archive using **squan** profile.
+- 마리나 베이 샌즈
+- 가든스 바이 더 베이
+- 싱가포르 오락실 (아마도 Virtualand NEX가 될 것 같습니다. 싱가포르에서 마이마이 기체 최대 보유 오락실일 걸요? 후기는 가능하면 **squan** 프로필로 올리겠습니다.)
