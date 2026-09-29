@@ -19,21 +19,17 @@ speffz 배치를 기준으로 서술합니다. (버퍼는 A)
 
 ### B
 
-B가 레터페어 앞일때: U2 insert U' undo U'
+B가 레터페어 앞일때: U2 insert U' undo U'<br>
 B가 레터페어 뒤일때: U insert U undo U2
-
-예시:
+<br>
+예시:<br>
 BF: U2 y' u r' u' r U' r' u r u' y U' 
 
 ## D면
 
-레터페어 V: r2 D' r2 D r2 U2 r2 D' r2 D r2
+레터페어 V: r2 D' r2 D r2 U2 r2 D' r2 D r2<br>
 U, W, X는 D, D', D2로 유도 -> 공식 -> undo
 
 ## 정리
 
 참 쉽죠?
-
-## References
-
-- 참고 자료
